@@ -3,278 +3,507 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pop Divas Cutest World ✨👑</title>
+    <title>Pop Divas: Imperial Dynasty ✨👑</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800;900&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <div class="bubbles-bg">
-        <span style="--i:11;"></span>
-        <span style="--i:12;"></span>
-        <span style="--i:24;"></span>
-        <span style="--i:10;"></span>
-        <span style="--i:14;"></span>
-        <span style="--i:23;"></span>
-        <span style="--i:18;"></span>
-        <span style="--i:16;"></span>
-    </div>
+    <div class="stars-overlay"></div>
+    <div class="glow-bg"></div>
 
-    <nav class="nav-container">
+    <nav class="navbar">
         <div class="logo">
-            <span class="logo-icon">💖</span> POP WORLD
+            <i class="fa-solid fa-crown gold-icon"></i>
+            <span>IMPERIAL<strong>POP</strong></span>
         </div>
-        <div class="nav-menu">
-            <a href="#rainhas">👑 Rainhas</a>
-            <a href="#clipes">🎬 Clipes</a>
-            <a href="#bastidores">🎧 Bastidores</a>
-            <a href="#fandoms">🌟 Fandoms</a>
-        </div>
-        <button class="cute-btn" onclick="soltarConfete()">🎉 Party!</button>
+        <ul class="nav-links">
+            <li><a href="#rainhas"><i class="fa-solid fa-gem"></i> Rainhas</a></li>
+            <li><a href="#clipes"><i class="fa-solid fa-compact-disc"></i> Visuais</a></li>
+            <li><a href="#bastidores"><i class="fa-solid fa-sliders"></i> Bastidores</a></li>
+            <li><a href="#fandoms"><i class="fa-solid fa-fire"></i> Fandoms</a></li>
+            <li><a href="#quiz"><i class="fa-solid fa-brain"></i> Quiz Pop</a></li>
+        </ul>
+        <button class="gold-btn-sm" id="mode-toggle" onclick="toggleGlowMode()">
+            <i class="fa-solid fa-sparkles"></i> Aura Glow
+        </button>
     </nav>
 
     <header class="hero">
-        <div class="hero-card">
-            <span class="cute-badge">✨ Mundo Pop Feminino ✨</span>
-            <h1>O Reino das <span class="highlight">Divas do Pop!</span> 🎤🎀</h1>
-            <p>De estrelas lendárias a recordes mundiais: conheça a magia, a arte e o poder que fazem o mundo dançar!</p>
-            <div class="hero-buttons">
-                <a href="#rainhas" class="btn-primary">Explorar Eras 🚀</a>
-                <a href="#fandoms" class="btn-secondary">Ver Fandoms ⭐</a>
+        <div class="hero-content">
+            <span class="gold-badge"><i class="fa-solid fa-crown"></i> Enciclopédia Interativa da Cultura Pop</span>
+            <h1>O REINADO DAS <br><span class="gold-text-gradient">DIVAS DO POP</span></h1>
+            <p>Uma imersão completa sobre arte, estética, composições e a força cultural inigualável que rege a indústria musical no mundo todo.</p>
+            <div class="hero-actions">
+                <a href="#rainhas" class="btn-gold"><i class="fa-solid fa-play"></i> Iniciar Jornada</a>
+                <a href="#player" class="btn-outline"><i class="fa-solid fa-music"></i> Player Visual</a>
+            </div>
+        </div>
+
+        <div class="hero-stats-card">
+            <h3><i class="fa-solid fa-chart-line"></i> O Impacto em Números</h3>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-num" id="stat1">0</span>
+                    <span class="stat-label">Bilhões de Streams</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-num" id="stat2">0</span>
+                    <span class="stat-label">Estádios Lotados</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-num" id="stat3">0</span>
+                    <span class="stat-label">Eras Marcantes</span>
+                </div>
             </div>
         </div>
     </header>
 
-    <main class="container">
+    <main class="main-container">
 
-        <section id="rainhas" class="card-section">
-            <div class="section-title">
-                <span class="emoji">👑</span>
-                <h2>1. As Rainhas do Pop: De Madonna a Taylor Swift</h2>
+        <section id="rainhas" class="section-card">
+            <div class="section-header">
+                <span class="chapter-tag">Capítulo 01</span>
+                <h2>1. As Rainhas do Pop: De Madonna a Taylor Swift <span class="gold-text">(e muito além)</span></h2>
+                <div class="gold-line"></div>
             </div>
 
-            <div class="grid">
-                <div class="text-content">
-                    <p class="intro-p">
-                        Se a música pop fosse um reino de verdade, a linha de sucessão ao trono daria uma série de várias temporadas — e a lista de rainhas só cresce! 👑✨
+            <div class="grid-2col">
+                <div class="text-block">
+                    <p class="lead-text">
+                        Se a música pop fosse um reino de verdade, a linha de sucessão ao trono daria uma série de várias temporadas — e a lista de rainhas só cresce.
                     </p>
                     <p>
-                        Tudo começou quando <strong>Madonna</strong> decretou as regras nos anos 80: tem que chocar, ditar moda e se reinventar! Antes dela, <strong>Kate Bush</strong> já plantava sementes teatrais com visuais e vozes etéreas nos anos 70/80.
+                        Tudo começou lá atrás, quando <strong>Madonna</strong> decretou as regras do jogo nos anos 80: para ser da realeza, não basta cantar bem, tem que chocar, ditar moda e se reinventar a cada álbum. Antes dela, <strong>Kate Bush</strong> já plantava as sementes do pop artístico e teatral nos anos 70/80, com aquela voz etérea e visuais que pareciam saídos de um sonho (ou pesadelo) literário.
                     </p>
 
-                    <div class="queen-selector">
-                        <p class="selector-title">Clique para ver o superpoder de cada uma: 👇</p>
-                        <div class="queen-buttons">
-                            <button class="q-btn active" onclick="mostrarRainha('mariah', this)"> Mariah</button>
-                            <button class="q-btn" onclick="mostrarRainha('beyonce', this)"> Beyoncé</button>
-                            <button class="q-btn" onclick="mostrarRainha('taylor', this)"> Taylor</button>
-                            <button class="q-btn" onclick="mostrarRainha('miley', this)"> Miley</button>
-                            <button class="q-btn" onclick="mostrarRainha('kpop', this)"> K-Pop</button>
+                    <div class="interactive-queen-box">
+                        <div class="queen-tabs">
+                            <button class="q-tab active" onclick="loadQueen('mariah')">Mariah</button>
+                            <button class="q-tab" onclick="loadQueen('beyonce')">Beyoncé</button>
+                            <button class="q-tab" onclick="loadQueen('taylor')">Taylor</button>
+                            <button class="q-tab" onclick="loadQueen('miley')">Miley</button>
+                            <button class="q-tab" onclick="loadQueen('kpop')">K-Pop</button>
                         </div>
-                        <div class="queen-card-display" id="queen-info">
-                            <span class="star-icon">💖</span>
-                            <p id="queen-text"><strong>Mariah Carey:</strong> Alcance vocal de outro planeta, melismas inesquecíveis e o eterno reinado do Natal na Billboard!</p>
+                        <div class="queen-display-card" id="queen-card">
+                            <i class="fa-solid fa-microphone-lines gold-icon-big"></i>
+                            <div class="queen-card-text">
+                                <h4 id="q-title">Mariah Carey</h4>
+                                <p id="q-desc">Chegou com o alcance vocal de outro planeta, os melismas que viraram marca registrada e recordes absurdos de singles número 1 na Billboard (incluindo o eterno domínio natalino).</p>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="quote-box">
-                        <p>💡 <em>"O pop feminino não é só sobre lançar hits; é sobre criar eras icônicas que definem gerações. Quem será a próxima da fila?"</em></p>
+                    <div class="quote-banner">
+                        <i class="fa-solid fa-quote-left quote-icon"></i>
+                        <p><em>"Resumo da ópera: o pop feminino não é só sobre lançar hits; é sobre criar eras icônicas que definem gerações. Quem será a próxima da fila?"</em></p>
                     </div>
                 </div>
 
-                <div class="photo-placeholder">
-                    <div class="photo-inner">
-                        <div class="photo-icon">📸👑</div>
-                        <h3>[ FOTO 1 ]</h3>
-                        <p>Insira aqui uma imagem das Rainhas do Pop</p>
+                <div class="image-container">
+                    <div class="royal-frame">
+                        <div class="img-placeholder">
+                            <i class="fa-solid fa-crown img-center-icon"></i>
+                            <h3>ESPAÇO PARA IMAGEM 1</h3>
+                            <p>As Rainhas do Pop e a Linha de Sucessão</p>
+                            <span class="upload-tag"><i class="fa-solid fa-image"></i> [ Cole sua imagem aqui ]</span>
+                        </div>
+                    </div>
+                    <div class="like-counter-widget">
+                        <button class="like-btn" onclick="addVote('vota1')">
+                            <i class="fa-solid fa-heart"></i> Aclamar Rainha
+                        </button>
+                        <span id="vota1" class="vote-count">1.240 Aclamações</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="clipes" class="card-section alt-bg">
-            <div class="section-title">
-                <span class="emoji">🎬</span>
+        <section id="clipes" class="section-card dark-blue-bg">
+            <div class="section-header">
+                <span class="chapter-tag">Capítulo 02</span>
                 <h2>2. A Era dos Videoclipes e a Identidade Visual</h2>
+                <div class="gold-line"></div>
             </div>
 
-            <div class="grid reverse">
-                <div class="photo-placeholder">
-                    <div class="photo-inner">
-                        <div class="photo-icon">🎨🎥</div>
-                        <h3>[ FOTO 2 ]</h3>
-                        <p>Insira aqui uma imagem dos Videoclipes e Estética</p>
+            <div class="grid-2col reverse-grid">
+                <div class="image-container">
+                    <div class="royal-frame">
+                        <div class="img-placeholder">
+                            <i class="fa-solid fa-film img-center-icon"></i>
+                            <h3>ESPAÇO PARA IMAGEM 2</h3>
+                            <p>A Estética e a Moda nos Videoclipes</p>
+                            <span class="upload-tag"><i class="fa-solid fa-image"></i> [ Cole sua imagem aqui ]</span>
+                        </div>
+                    </div>
+                    <div class="like-counter-widget">
+                        <button class="like-btn" onclick="addVote('vota2')">
+                            <i class="fa-solid fa-heart"></i> Favoritar Estética
+                        </button>
+                        <span id="vota2" class="vote-count">980 Favoritos</span>
                     </div>
                 </div>
 
-                <div class="text-content">
-                    <p class="intro-p">
-                        Você consegue ouvir <em>Bad Romance</em> da Lady Gaga sem lembrar dos dançarinos de branco? Impossível! No pop, a música entra pelos ouvidos e te conquista pelos olhos! 👀💖
+                <div class="text-block">
+                    <p class="lead-text">
+                        Vamos ser sinceros: você consegue ouvir o início de <em>Bad Romance</em> da Lady Gaga sem visualizar mentalmente aqueles dançarinos de branco ou os olhos gigantes em computação gráfica? Provavelmente não.
+                    </p>
+                    <p>
+                        No mundo do pop feminino, a música entra pelos ouvidos, mas te conquista mesmo é pelos olhos. A identidade visual é o que transforma uma música legal em um marco histórico.
                     </p>
 
-                    <div class="fofa-list">
-                        <div class="fofa-item">
-                            <span class="item-icon">🌈</span>
-                            <div>
-                                <h4>Conceito é Tudo!</h4>
-                                <p>Dos visuais futuristas de Kate Bush ao maximalismo neon vibrante do K-Pop!</p>
+                    <div class="accordion-group">
+                        <div class="acc-item" onclick="toggleAcc(this)">
+                            <div class="acc-header">
+                                <span><i class="fa-solid fa-wand-magic-sparkles"></i> Conceito é Tudo</span>
+                                <i class="fa-solid fa-chevron-down acc-arrow"></i>
+                            </div>
+                            <div class="acc-body">
+                                <p>Desde os visuais futuristas e teatrais de Kate Bush até a estética colegial dos anos 2000 e o maximalismo neon do K-pop.</p>
                             </div>
                         </div>
 
-                        <div class="fofa-item">
-                            <span class="item-icon">🎨</span>
-                            <div>
-                                <h4>Paleta de Cores</h4>
-                                <p>Cada álbum tem sua própria identidade. Se a era é triste é azul/cinza; se é dançante, neon em tudo!</p>
+                        <div class="acc-item" onclick="toggleAcc(this)">
+                            <div class="acc-header">
+                                <span><i class="fa-solid fa-palette"></i> Paleta de Cores</span>
+                                <i class="fa-solid fa-chevron-down acc-arrow"></i>
+                            </div>
+                            <div class="acc-body">
+                                <p>Cada álbum tem sua própria "identidade de marca". Se a era é triste, o clipe é cinza ou azul; se é frita e dançante, joga neon em tudo!</p>
                             </div>
                         </div>
 
-                        <div class="fofa-item">
-                            <span class="item-icon">⚡</span>
-                            <div>
-                                <h4>O Fator Choque</h4>
-                                <p>Vestido de carne da Gaga, referências de <em>Thank U, Next</em> ou danças perfeitas do BLACKPINK!</p>
+                        <div class="acc-item" onclick="toggleAcc(this)">
+                            <div class="acc-header">
+                                <span><i class="fa-solid fa-bolt"></i> O Fator Choque</span>
+                                <i class="fa-solid fa-chevron-down acc-arrow"></i>
+                            </div>
+                            <div class="acc-body">
+                                <p>Looks como o vestido de carne da Gaga, as referências cinematográficas de <em>Thank U, Next</em> da Ariana Grande ou as coreografias milimetricamente calculadas do BLACKPINK quebram a internet!</p>
                             </div>
                         </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="player" class="player-section">
+            <div class="player-box">
+                <div class="player-header">
+                    <i class="fa-solid fa-compact-disc fa-spin gold-icon"></i>
+                    <span>Player de Conceitos Pop</span>
+                </div>
+                <div class="player-body">
+                    <div class="track-info">
+                        <h4 id="song-title">Bad Romance — Lady Gaga</h4>
+                        <p id="song-era">Era: The Fame Monster (2009)</p>
+                    </div>
+                    <div class="player-controls">
+                        <button onclick="prevSong()"><i class="fa-solid fa-backward-step"></i></button>
+                        <button class="play-btn" id="play-btn" onclick="togglePlay()"><i class="fa-solid fa-play"></i></button>
+                        <button onclick="nextSong()"><i class="fa-solid fa-forward-step"></i></button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="bastidores" class="card-section">
-            <div class="section-title">
-                <span class="emoji">🎧</span>
+        <section id="bastidores" class="section-card">
+            <div class="section-header">
+                <span class="chapter-tag">Capítulo 03</span>
                 <h2>3. Bastidores: Mulheres na Produção e Composição</h2>
+                <div class="gold-line"></div>
             </div>
 
-            <div class="grid">
-                <div class="text-content">
-                    <div class="alert-cute">
-                        <span>🚨 SPOILER ALERT!</span>
-                        <p>Esqueça o mito de que as divas só cantam músicas prontas. A realidade é bem mais foda: elas comandam as canetas e as mesas de som! ✍️🎛️</p>
+            <div class="grid-2col">
+                <div class="text-block">
+                    <div class="alert-gold-box">
+                        <i class="fa-solid fa-circle-exclamation alert-icon"></i>
+                        <div>
+                            <strong>ALERTA DE SPOILER!</strong>
+                            <p>Existe um mito muito antigo — e bem ultrapassado — de que as divas pop entram no estúdio, recebem uma música pronta de um produtor engravatado, cantam e vão embora. A realidade é bem diferente e muito mais foda.</p>
+                        </div>
                     </div>
 
-                    <div class="cards-mini-grid">
-                        <div class="mini-card">
-                            <span class="mini-icon">🎤</span>
+                    <p>Hoje, as mulheres comandam a caneta e as mesas de som. Quer exemplos?</p>
+
+                    <div class="producers-grid">
+                        <div class="holo-card">
+                            <div class="holo-icon"><i class="fa-solid fa-headphones"></i></div>
                             <h4>Billie Eilish</h4>
-                            <p>Revolucionou o pop gravando tudo no quarto de casa!</p>
+                            <p>Revolucionou a sonoridade do pop moderno gravando músicas no quarto de casa com o irmão.</p>
                         </div>
-                        <div class="mini-card">
-                            <span class="mini-icon">🎸</span>
+                        <div class="holo-card">
+                            <div class="holo-icon"><i class="fa-solid fa-guitar"></i></div>
                             <h4>Olivia Rodrigo</h4>
-                            <p>Transforma dramas teens em hinos de rock-pop giga marcantes!</p>
+                            <p>Transforma dramas adolescentes em hinos de rock-pop que todo mundo canta gritando no carro, tudo escrito por ela.</p>
                         </div>
-                        <div class="mini-card">
-                            <span class="mini-icon">📝</span>
+                        <div class="holo-card">
+                            <div class="holo-icon"><i class="fa-solid fa-pen-nib"></i></div>
                             <h4>Taylor Swift</h4>
-                            <p>Uma das maiores compositoras, criando pontes que parecem poesias!</p>
+                            <p>É considerada uma das maiores compositoras da sua geração, escrevendo bridges que parecem poesias complexas.</p>
                         </div>
-                        <div class="mini-card">
-                            <span class="mini-icon">🎚️</span>
+                        <div class="holo-card">
+                            <div class="holo-icon"><i class="fa-solid fa-sliders"></i></div>
                             <h4>Mariah Carey</h4>
-                            <p>Co-escrevia e produzia seus hits revolucionários!</p>
+                            <p>Não só cantava, como co-escrevia e produzia boa parte do material que virou padrão de vocal no pop.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="photo-placeholder">
-                    <div class="photo-inner">
-                        <div class="photo-icon">🎼🎹</div>
-                        <h3>[ FOTO 3 ]</h3>
-                        <p>Insira aqui uma imagem de Bastidores e Produção</p>
+                <div class="image-container">
+                    <div class="royal-frame">
+                        <div class="img-placeholder">
+                            <i class="fa-solid fa-sliders img-center-icon"></i>
+                            <h3>ESPAÇO PARA IMAGEM 3</h3>
+                            <p>Mulheres na Composição e Produção Musical</p>
+                            <span class="upload-tag"><i class="fa-solid fa-image"></i> [ Cole sua imagem aqui ]</span>
+                        </div>
+                    </div>
+                    <div class="like-counter-widget">
+                        <button class="like-btn" onclick="addVote('vota3')">
+                            <i class="fa-solid fa-heart"></i> Respeitar Compositores
+                        </button>
+                        <span id="vota3" class="vote-count">1.890 Respeitos</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="fandoms" class="card-section alt-bg">
-            <div class="section-title">
-                <span class="emoji">🌍</span>
-                <h2>4. O Fenômeno dos Fandoms Globais (e dos Recordes)</h2>
+        <section id="fandoms" class="section-card dark-blue-bg">
+            <div class="section-header">
+                <span class="chapter-tag">Capítulo 04</span>
+                <h2>4. O Fenômeno dos Fandoms Globais <span class="gold-text">(e dos Recordes)</span></h2>
+                <div class="gold-line"></div>
             </div>
 
-            <p class="center-text">
-                Wall Street é fichinha perto da organização de um fandom pop! 
-                <span class="tags">
-                    <span class="tag">Swifties</span>
-                    <span class="tag">Beyhive</span>
-                    <span class="tag">Blinks</span>
-                    <span class="tag">Arianators</span>
-                    <span class="tag">ARMY</span>
+            <p class="section-intro text-center">
+                Se você acha que o mercado financeiro de Wall Street é organizado, é porque nunca viu um mutirão de votação de um fandom pop. 
+                <span class="fandom-pills">
+                    <span class="pill">Swifties</span>
+                    <span class="pill">Beyhive</span>
+                    <span class="pill">Blinks</span>
+                    <span class="pill">Arianators</span>
+                    <span class="pill">ARMY</span>
                 </span>
-                são quase uma inteligência geopolítica treinada! 🔥
+                não são apenas fãs; eles são quase uma inteligência geopolítica altamente treinada.
             </p>
 
-            <div class="grid reverse">
-                <div class="photo-placeholder">
-                    <div class="photo-inner">
-                        <div class="photo-icon">🎟️⭐</div>
-                        <h3>[ FOTO 4 ]</h3>
-                        <p>Insira aqui uma imagem dos Fandoms e Shows</p>
+            <div class="grid-2col reverse-grid">
+                <div class="image-container">
+                    <div class="royal-frame">
+                        <div class="img-placeholder">
+                            <i class="fa-solid fa-users-rays img-center-icon"></i>
+                            <h3>ESPAÇO PARA IMAGEM 4</h3>
+                            <p>Fandoms, Shows em Estádios e Mutirões</p>
+                            <span class="upload-tag"><i class="fa-solid fa-image"></i> [ Cole sua imagem aqui ]</span>
+                        </div>
+                    </div>
+                    <div class="like-counter-widget">
+                        <button class="like-btn" onclick="addVote('vota4')">
+                            <i class="fa-solid fa-heart"></i> Força do Fandom
+                        </button>
+                        <span id="vota4" class="vote-count">3.450 Votos</span>
                     </div>
                 </div>
 
-                <div class="text-content">
-                    <p>Eles se organizam no Twitter/X, TikTok e Discord para dominar o mundo:</p>
+                <div class="text-block">
+                    <p>Os fandoms globais mudaram completamente as regras da indústria musical. Eles se organizam no Twitter/X, TikTok e Discord para:</p>
 
-                    <div class="fandom-cards">
-                        <div class="f-box">
-                            <h4>🏆 Derrubar Recordes</h4>
-                            <p>Milhões de views em 24h, topo do Spotify e Billboard em dezenas de países!</p>
+                    <div class="fandom-power-list">
+                        <div class="power-item">
+                            <div class="p-number">01</div>
+                            <div>
+                                <h4>Derrubar Recordes</h4>
+                                <p>Conseguir milhões de visualizações em clipes nas primeiras 24 horas, quebrar recordes de streaming no Spotify e Billboard, e fazer álbuns debutarem em primeiro lugar simultaneamente.</p>
+                            </div>
                         </div>
-                        <div class="f-box">
-                            <h4>🔍 Análise Forense</h4>
-                            <p>Investigando cada detalhe em busca de "easter eggs" e pistas do próximo álbum!</p>
+
+                        <div class="power-item">
+                            <div class="p-number">02</div>
+                            <div>
+                                <h4>Análise Forense</h4>
+                                <p>Estudar cada post da artista em busca de "easter eggs" (pistas escondidas) sobre o próximo álbum.</p>
+                            </div>
                         </div>
-                        <div class="f-box">
-                            <h4>🎪 Esgotar Estádios</h4>
-                            <p>Acampando por dias e derrubando sites em minutos para ver suas divas!</p>
+
+                        <div class="power-item">
+                            <div class="p-number">03</div>
+                            <div>
+                                <h4>Esgotar Estádios</h4>
+                                <p>Acampar por dias e derrubar sites de ingressos em minutos (as tours de Taylor, Beyoncé e BLACKPINK são prova viva disso).</p>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="heart-banner">
-                        💖 O artista dá o ritmo, mas é o fandom que faz o mundo girar e quebrar recordes!
+                    <div class="footer-highlight-card">
+                        <i class="fa-solid fa-earth-americas highlight-icon"></i>
+                        <p>O pop feminino atual não existiria sem essa força motriz. No final das contas, o artista dá o ritmo, mas é o fandom que faz o mundo girar — e quebrar recordes no processo.</p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section id="quiz" class="section-card quiz-card">
+            <div class="section-header">
+                <span class="chapter-tag">Desafio Imperial</span>
+                <h2>Quiz: Qual Diva do Pop Combina Com Você? 👑</h2>
+                <div class="gold-line"></div>
+            </div>
+
+            <div class="quiz-box" id="quiz-box">
+                <p class="quiz-question" id="quiz-q">O que não pode faltar no seu clipe perfeito?</p>
+                <div class="quiz-options" id="quiz-opts">
+                    <button class="quiz-btn" onclick="answerQuiz('a')">✨ Visuais futuristas e chocantes</button>
+                    <button class="quiz-btn" onclick="answerQuiz('b')">✍️ Letras poéticas e cheias de segredos</button>
+                    <button class="quiz-btn" onclick="answerQuiz('c')">🔥 Coreografias perfeitas em grupo</button>
+                </div>
+                <div class="quiz-result" id="quiz-res" style="display: none;"></div>
             </div>
         </section>
 
     </main>
 
-    <footer>
-        <p>&copy; 2026 - Desenvolvido por: Davi e Bruno - Turma 1TB</p>
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <i class="fa-solid fa-crown gold-icon"></i>
+                <h3>IMPERIAL POP DYNASTY</h3>
+                <p>O portal definitivo sobre o legado e o poder das rainhas da música mundial.</p>
+            </div>
+            <div class="footer-credits">
+                <p>&copy; 2026 - Desenvolvido por: Davi e Bruno - Turma 1TB</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-spotify"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script>
-        const infoRainhas = {
-            mariah: "<strong>Mariah Carey:</strong> Alcance vocal de outro planeta, melismas inesquecíveis e o eterno reinado do Natal na Billboard!",
-            beyonce: "<strong>Beyoncé:</strong> Transformou a performance em um show olímpico de dança, vocal impecável e presença de palco surreal!",
-            taylor: "<strong>Taylor Swift:</strong> Constrói um império com letras super poéticas, pontes marcantes e uma conexão mágica com os fãs!",
-            miley: "<strong>Miley Cyrus:</strong> A rainha das mudanças: da Hannah Montana ao Wrecking Ball e à fase madura sem pedir licença!",
-            kpop: "<strong>K-Pop (BLACKPINK, TWICE, NewJeans):</strong> Pop coreano global com coreografias perfeitas e recordes inacreditáveis de views!"
+        // Dados das Divas do Pop
+        const queensInfo = {
+            mariah: {
+                title: "Mariah Carey",
+                desc: "Chegou com o alcance vocal de outro planeta, os melismas que viraram marca registrada e recordes absurdos de singles número 1 na Billboard (incluindo o eterno domínio natalino)."
+            },
+            beyonce: {
+                title: "Beyoncé",
+                desc: "Transformou a performance pop em um evento cultural de nível olímpico (alguém aí consegue cantar e dançar daquele jeito sem perder o fôlego?)."
+            },
+            taylor: {
+                title: "Taylor Swift",
+                desc: "Provou que o império do pop também se constrói com composições afiadas e uma conexão quase telepática com os fãs."
+            },
+            miley: {
+                title: "Miley Cyrus",
+                desc: "A rainha da reinvenção radical: saiu da Hannah Montana, passou pelo caos do 'Wrecking Ball' e chegou a uma fase country-pop madura sem pedir licença a ninguém."
+            },
+            kpop: {
+                title: "K-Pop (BLACKPINK, TWICE, NewJeans)",
+                desc: "Mostrou que o pop feminino global também fala coreano, dança sincronizado e quebra recordes de streaming e vendas com a mesma força."
+            }
         };
 
-        function mostrarRainha(nome, elemento) {
-            document.querySelectorAll('.q-btn').forEach(btn => btn.classList.remove('active'));
-            elemento.classList.add('active');
+        function loadQueen(key) {
+            document.querySelectorAll('.q-tab').forEach(b => b.classList.remove('active'));
+            event.target.classList.add('active');
             
-            const box = document.getElementById('queen-info');
-            box.style.transform = 'scale(0.95)';
-            box.style.opacity = '0.5';
-            
+            const card = document.getElementById('queen-card');
+            card.style.opacity = '0';
             setTimeout(() => {
-                document.getElementById('queen-text').innerHTML = infoRainhas[nome];
-                box.style.transform = 'scale(1)';
-                box.style.opacity = '1';
-            }, 150);
+                document.getElementById('q-title').innerText = queensInfo[key].title;
+                document.getElementById('q-desc').innerText = queensInfo[key].desc;
+                card.style.opacity = '1';
+            }, 200);
         }
 
-        function soltarConfete() {
-            alert("🎉 POP PARTY! Sinta a energia das divas do pop! ✨💖");
+        // Acordeão
+        function toggleAcc(element) {
+            element.classList.toggle('open');
+        }
+
+        // Botão de Votos com Contador
+        function addVote(id) {
+            const el = document.getElementById(id);
+            let current = parseInt(el.innerText.replace('.', '').replace(/\D/g, ''));
+            current++;
+            el.innerText = current.toLocaleString('pt-BR') + " Votos/Aclamações";
+        }
+
+        // Player Fictício
+        const playlist = [
+            { title: "Bad Romance — Lady Gaga", era: "Era: The Fame Monster (2009)" },
+            { title: "Blank Space — Taylor Swift", era: "Era: 1989 (2014)" },
+            { title: "Crazy in Love — Beyoncé", era: "Era: Dangerously in Love (2003)" },
+            { title: "How You Like That — BLACKPINK", era: "Era: The Album (2020)" }
+        ];
+        let songIndex = 0;
+        let isPlaying = false;
+
+        function updateSong() {
+            document.getElementById('song-title').innerText = playlist[songIndex].title;
+            document.getElementById('song-era').innerText = playlist[songIndex].era;
+        }
+
+        function nextSong() {
+            songIndex = (songIndex + 1) % playlist.length;
+            updateSong();
+        }
+
+        function prevSong() {
+            songIndex = (songIndex - 1 + playlist.length) % playlist.length;
+            updateSong();
+        }
+
+        function togglePlay() {
+            isPlaying = !isPlaying;
+            document.getElementById('play-btn').innerHTML = isPlaying ? 
+                '<i class="fa-solid fa-pause"></i>' : '<i class="fa-solid fa-play"></i>';
+        }
+
+        // Contador Animado no Hero
+        function animateValue(id, start, end, duration) {
+            let obj = document.getElementById(id);
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                obj.innerHTML = Math.floor(progress * (end - start) + start) + "B+";
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+        animateValue("stat1", 0, 150, 2000);
+        animateValue("stat2", 0, 50, 2000);
+        animateValue("stat3", 0, 100, 2000);
+
+        // Modos Glow
+        function toggleGlowMode() {
+            document.body.classList.toggle('gold-glow-active');
+        }
+
+        // Quiz
+        function answerQuiz(option) {
+            const res = document.getElementById('quiz-res');
+            document.getElementById('quiz-opts').style.display = 'none';
+            document.getElementById('quiz-q').style.display = 'none';
+            res.style.display = 'block';
+
+            if(option === 'a') {
+                res.innerHTML = "👑 <strong>Você é Lady Gaga / Katy Perry!</strong> Ícone visual, ousada e apaixonada por conceitos épicos e chocantes!";
+            } else if(option === 'b') {
+                res.innerHTML = "📜 <strong>Você é Taylor Swift / Olivia Rodrigo!</strong> Poetisa do pop, mestre em contar histórias e criar bridges inesquecíveis!";
+            } else {
+                res.innerHTML = "🔥 <strong>Você é Beyoncé / BLACKPINK!</strong> Presença de palco imbatível, energia pura e dona de recordes gigantescos!";
+            }
         }
     </script>
 </body>
