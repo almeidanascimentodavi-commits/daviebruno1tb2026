@@ -1,5 +1,5 @@
 /* ==========================================================================
-   IMPERIAL POP DYNASTY — AZUL ESCURO & DOURADO (SELETOR DE DIVAS)
+   IMPERIAL POP DYNASTY — COM CARREGAMENTO DE IMAGENS POR LINK
    ========================================================================== */
 
 :root {
@@ -15,6 +15,14 @@
     --font-heading: 'Cinzel', serif;
     --font-body: 'Plus Jakarta Sans', sans-serif;
     --transition: all 0.3s ease;
+}
+
+/* Modo Alternativo Cyber */
+body.cyber-mode {
+    --gold-primary: #00f0ff;
+    --gold-gradient: linear-gradient(135deg, #00f0ff, #7000ff);
+    --gold-glow: rgba(0, 240, 255, 0.4);
+    --border-gold: rgba(0, 240, 255, 0.4);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -45,86 +53,41 @@ body {
 
 /* Navbar */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; justify-content: space-between; align-items: center;
     padding: 1.2rem 4rem;
     background: rgba(2, 8, 19, 0.9);
     backdrop-filter: blur(15px);
     border-bottom: 1px solid var(--border-gold);
-    position: fixed;
-    top: 0; width: 100%;
-    z-index: 1000;
+    position: fixed; top: 0; width: 100%; z-index: 1000;
 }
 
-.logo {
-    font-family: var(--font-heading);
-    font-size: 1.3rem;
-    display: flex; gap: 0.6rem; align-items: center;
-}
-
+.logo { font-family: var(--font-heading); font-size: 1.3rem; display: flex; gap: 0.6rem; align-items: center; }
 .nav-links { display: flex; list-style: none; gap: 2rem; }
-.nav-links a {
-    color: var(--text-muted);
-    text-decoration: none;
-    font-weight: 600;
-    transition: var(--transition);
-}
+.nav-links a { color: var(--text-muted); text-decoration: none; font-weight: 600; transition: var(--transition); }
 .nav-links a:hover { color: var(--gold-primary); }
 
 .gold-btn-sm {
-    background: transparent;
-    border: 1px solid var(--gold-primary);
-    color: var(--gold-primary);
-    padding: 0.5rem 1.2rem;
-    border-radius: 50px;
-    font-weight: 700;
-    cursor: pointer;
+    background: transparent; border: 1px solid var(--gold-primary);
+    color: var(--gold-primary); padding: 0.5rem 1.2rem; border-radius: 50px;
+    font-weight: 700; cursor: pointer; transition: var(--transition);
 }
+.gold-btn-sm:hover { background: var(--gold-primary); color: var(--bg-dark); }
 
 /* Hero Banner */
-.hero {
-    padding: 9rem 4rem 4rem 4rem;
-    text-align: center;
-}
+.hero { padding: 9rem 2rem 3rem 2rem; text-align: center; }
 .hero-content { max-width: 800px; margin: 0 auto; }
 .gold-badge {
-    background: rgba(212, 175, 55, 0.1);
-    border: 1px solid var(--border-gold);
-    color: var(--gold-primary);
-    padding: 0.4rem 1rem;
-    border-radius: 30px;
-    font-size: 0.85rem;
+    background: rgba(212, 175, 55, 0.1); border: 1px solid var(--border-gold);
+    color: var(--gold-primary); padding: 0.4rem 1rem; border-radius: 30px; font-size: 0.85rem;
 }
-.hero h1 { font-family: var(--font-heading); font-size: 3.2rem; margin: 1.5rem 0; }
-.hero p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 2rem; }
-.hero-actions { display: flex; gap: 1rem; justify-content: center; }
+.hero h1 { font-family: var(--font-heading); font-size: 3rem; margin: 1.2rem 0; }
+.hero p { color: var(--text-muted); font-size: 1.1rem; }
 
-.btn-gold {
-    background: var(--gold-gradient);
-    color: var(--bg-dark);
-    padding: 0.8rem 2rem;
-    border-radius: 50px;
-    font-weight: 800;
-    text-decoration: none;
-}
-
-.btn-outline {
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: var(--text-light);
-    padding: 0.8rem 2rem;
-    border-radius: 50px;
-    text-decoration: none;
-}
-
-/* Main Container & Cards */
+/* Main Container */
 .main-container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
 .section-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border-gold);
-    border-radius: 24px;
-    padding: 3rem;
-    margin-bottom: 3rem;
+    background: var(--bg-card); border: 1px solid var(--border-gold);
+    border-radius: 24px; padding: 3rem; margin-bottom: 3rem;
 }
 .dark-blue-bg { background: var(--bg-card-alt); }
 .section-header { text-align: center; margin-bottom: 2.5rem; }
@@ -133,123 +96,107 @@ body {
 .gold-line { width: 80px; height: 3px; background: var(--gold-gradient); margin: 0.8rem auto 0 auto; }
 
 /* Seletor de Divas */
-.divas-selector {
-    display: flex;
-    justify-content: center;
-    gap: 0.8rem;
-    flex-wrap: wrap;
-    margin-bottom: 2.5rem;
-}
-
+.divas-selector { display: flex; justify-content: center; gap: 0.8rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
 .diva-btn {
-    background: var(--bg-card-alt);
-    border: 1px solid var(--border-gold);
-    color: var(--text-light);
-    padding: 0.7rem 1.4rem;
-    border-radius: 30px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: var(--transition);
+    background: var(--bg-card-alt); border: 1px solid var(--border-gold);
+    color: var(--text-light); padding: 0.7rem 1.4rem; border-radius: 30px;
+    font-weight: 700; cursor: pointer; transition: var(--transition);
 }
-
 .diva-btn.active, .diva-btn:hover {
-    background: var(--gold-primary);
-    color: var(--bg-dark);
-    box-shadow: 0 0 15px var(--gold-glow);
+    background: var(--gold-primary); color: var(--bg-dark); box-shadow: 0 0 15px var(--gold-glow);
 }
 
-/* Card do Perfil da Diva */
+/* Profile Card & Moldura com Imagem */
 .diva-profile-card {
-    background: rgba(2, 8, 19, 0.6);
-    border: 1px solid var(--border-gold);
-    border-radius: 20px;
-    padding: 2rem;
-    transition: opacity 0.3s ease;
+    background: rgba(2, 8, 19, 0.6); border: 1px solid var(--border-gold);
+    border-radius: 20px; padding: 2.5rem; transition: opacity 0.3s ease;
 }
 
-.grid-2col {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
-    align-items: center;
-}
+.grid-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center; }
+.reverse-grid { direction: ltr; }
 
 .royal-frame {
-    background: var(--bg-card-alt);
-    border: 2px solid var(--border-gold);
-    padding: 10px;
-    border-radius: 18px;
+    background: var(--bg-card-alt); border: 2px solid var(--border-gold);
+    padding: 10px; border-radius: 18px; box-shadow: 0 10px 25px rgba(0,0,0,0.5);
 }
 
-.img-placeholder {
-    height: 320px;
-    border: 2px dashed var(--border-gold);
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 1.5rem;
-    background: rgba(2, 8, 19, 0.7);
+.img-preview-area {
+    height: 340px; border: 2px dashed var(--border-gold); border-radius: 12px;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    text-align: center; padding: 1rem; background: rgba(2, 8, 19, 0.7); overflow: hidden;
 }
 
-.img-center-icon { font-size: 3rem; color: var(--gold-primary); margin-bottom: 0.8rem; }
-.img-placeholder h3 { font-family: var(--font-heading); color: var(--gold-primary); font-size: 1.1rem; }
-.img-placeholder p { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.8rem; }
-.upload-tag { background: rgba(212, 175, 55, 0.15); color: var(--gold-primary); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.75rem; }
+.img-icon-fallback { font-size: 3.5rem; color: var(--gold-primary); margin-bottom: 1rem; }
+.placeholder-text { color: var(--text-muted); font-size: 0.9rem; }
 
-.diva-name { font-family: var(--font-heading); font-size: 2rem; color: var(--gold-primary); }
-.diva-tag { display: inline-block; background: rgba(212, 175, 55, 0.15); color: var(--gold-primary); padding: 0.2rem 0.8rem; border-radius: 15px; font-size: 0.85rem; margin: 0.5rem 0 1rem 0; font-weight: 700; }
-
-.diva-stats-mini {
-    display: flex; gap: 1.5rem; margin: 1.5rem 0;
-}
-.stat-mini {
-    background: var(--bg-card);
-    padding: 0.8rem 1.2rem;
-    border-radius: 12px;
-    border: 1px solid rgba(255,255,255,0.08);
-}
-.stat-mini span { display: block; font-family: var(--font-heading); font-size: 1.3rem; color: var(--gold-primary); font-weight: 800; }
-.stat-mini small { color: var(--text-muted); font-size: 0.75rem; }
-
-.like-counter-widget {
-    display: flex; align-items: center; justify-content: space-between;
-    margin-top: 1rem; padding: 0.8rem 1.2rem;
-    background: rgba(2, 8, 19, 0.5); border-radius: 12px; border: 1px solid rgba(212, 175, 55, 0.2);
+/* Imagem Renderizada */
+.loaded-img {
+    width: 100%; height: 100%; object-fit: cover; border-radius: 8px;
+    animation: fadeIn 0.5s ease;
 }
 
-.like-btn {
-    background: transparent; border: 1px solid #ff4757; color: #ff4757;
-    padding: 0.4rem 1rem; border-radius: 20px; cursor: pointer; font-weight: 700;
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
 }
-.like-btn:hover { background: #ff4757; color: white; }
 
-/* Acordeão & Cards */
+/* Campo para Inserção de Link */
+.url-input-box {
+    display: flex; align-items: center; gap: 0.5rem;
+    background: var(--bg-card); border: 1px solid var(--border-gold);
+    padding: 0.6rem 1rem; border-radius: 12px; margin-top: 1rem;
+}
+
+.url-input-box input {
+    background: transparent; border: none; outline: none;
+    color: var(--text-light); width: 100%; font-size: 0.85rem;
+}
+
+.btn-input-apply {
+    background: var(--gold-primary); border: none; color: var(--bg-dark);
+    padding: 0.4rem 0.8rem; border-radius: 8px; cursor: pointer; font-weight: bold;
+}
+
+/* Texto & Métricas */
+.diva-name { font-family: var(--font-heading); font-size: 2.2rem; color: var(--gold-primary); }
+.diva-tag { display: inline-block; background: rgba(212, 175, 55, 0.15); color: var(--gold-primary); padding: 0.3rem 0.9rem; border-radius: 15px; font-size: 0.85rem; font-weight: 700; margin-bottom: 1rem; }
+.diva-description { color: var(--text-muted); margin-bottom: 1.5rem; }
+
+/* Discos de Ouro (Stats) */
+.record-discs { display: flex; gap: 1.5rem; margin-bottom: 1.5rem; }
+.disc-item {
+    display: flex; align-items: center; gap: 0.8rem;
+    background: var(--bg-card); border: 1px solid rgba(255,255,255,0.08);
+    padding: 0.8rem 1.2rem; border-radius: 14px;
+}
+.gold-disc-icon { font-size: 1.8rem; color: var(--gold-primary); }
+.disc-item h4 { font-family: var(--font-heading); font-size: 1.1rem; color: var(--text-light); }
+.disc-item small { color: var(--text-muted); font-size: 0.75rem; }
+
+/* Botão de Aclamação */
+.acclaim-btn {
+    background: linear-gradient(135deg, #ff4757, #ff6b81); color: white;
+    border: none; padding: 0.8rem 1.8rem; border-radius: 30px;
+    font-weight: 700; cursor: pointer; transition: var(--transition);
+}
+.acclaim-btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(255, 71, 87, 0.4); }
+
+/* Acordeão & Fandoms */
 .accordion-group { display: flex; flex-direction: column; gap: 0.8rem; margin-top: 1rem; }
 .acc-item { background: var(--bg-card); border: 1px solid var(--border-gold); border-radius: 12px; cursor: pointer; }
 .acc-header { padding: 1rem; display: flex; justify-content: space-between; font-weight: 700; color: var(--gold-primary); }
 .acc-body { padding: 0 1rem 1rem 1rem; display: none; color: var(--text-muted); }
 .acc-item.open .acc-body { display: block; }
 
-.producers-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; }
-.holo-card { background: var(--bg-card); border: 1px solid rgba(255,255,255,0.08); padding: 1rem; border-radius: 12px; }
-.holo-icon { font-size: 1.5rem; color: var(--gold-primary); margin-bottom: 0.4rem; }
-
-.pill { background: var(--gold-gradient); color: var(--bg-dark); font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.8rem; }
-
-/* Aura Glow */
-body.gold-glow-active {
-    --gold-primary: #00f0ff;
-    --gold-gradient: linear-gradient(135deg, #00f0ff, #7000ff);
-}
+.fandom-badges { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem; }
+.f-pill { background: var(--gold-gradient); color: var(--bg-dark); font-weight: 800; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.85rem; }
 
 /* Footer */
-.main-footer { background: #01040a; border-top: 1px solid var(--border-gold); padding: 2rem 4rem; text-align: center; }
+.main-footer { background: #01040a; border-top: 1px solid var(--border-gold); padding: 2rem; text-align: center; color: var(--text-muted); }
 
+/* Responsividade */
 @media (max-width: 768px) {
     .grid-2col { grid-template-columns: 1fr; }
     .nav-links { display: none; }
-    .hero { padding: 7rem 1.5rem 2rem 1.5rem; }
+    .navbar { padding: 1rem; }
 }
