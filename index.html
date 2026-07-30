@@ -1,245 +1,363 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imperial Pop Dynasty — A Era das Rainhas</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pop Universe - O Portal Oficial do Pop</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="glow-bg"></div>
-
+  <header class="main-header">
     <nav class="navbar">
-        <div class="logo">
-            <i class="fa-solid fa-crown gold-icon"></i>
-            <span class="gold-text-gradient">POP DYNASTY</span>
-        </div>
-        <ul class="nav-links">
-            <li><a href="#realeza"><i class="fa-solid fa-gem"></i> As Rainhas</a></li>
-            <li><a href="#videoclipes"><i class="fa-solid fa-film"></i> Identidade Visual</a></li>
-            <li><a href="#bastidores"><i class="fa-solid fa-sliders"></i> Composição</a></li>
-            <li><a href="#fandoms"><i class="fa-solid fa-users"></i> Fandoms</a></li>
-        </ul>
-        <button id="theme-toggle" class="gold-btn-sm">
-            <i class="fa-solid fa-bolt"></i> Modo Cyber
-        </button>
+      <div class="logo">✨ Pop Universe</div>
+      <ul class="nav-links">
+        <li><a href="#artistas">Artistas</a></li>
+        <li><a href="#videoclipes">Videoclipes</a></li>
+        <li><a href="#shows">Shows & Fandoms</a></li>
+        <li><a href="#fanzone">Fan Zone</a></li>
+      </ul>
     </nav>
+    <div class="hero-text">
+      <h1>Mundo Pop em Destaque</h1>
+      <p>Acompanhe as maiores divas da música, lançamentos, turnês e muito mais em um só lugar.</p>
+    </div>
+  </header>
 
-    <header class="hero">
-        <div class="hero-content">
-            <span class="gold-badge"><i class="fa-solid fa-record-vinyl"></i> Arquivos da Música Pop</span>
-            <h1>A Linhagem Sagrada das <span class="gold-text-gradient">Imperatrizes do Pop</span></h1>
-            <p>De reinvenções radicais a quebras de recordes globais: uma imersão na engenharia sonora, visual e cultural das mulheres que moldaram gerações.</p>
+  <main class="main-container">
+
+    <section id="artistas" class="section-block">
+      <div class="section-title">
+        <h2>🌟 Grandes Nomes da Música</h2>
+        <p>Conheça os perfis completos com biografias, dados e links oficiais.</p>
+      </div>
+
+      <article class="artist-card">
+        <div class="card-top">
+          <div class="img-wrapper">
+            <img src="https://via.placeholder.com/150/ff4757/ffffff?text=Taylor" alt="Taylor Swift" class="profile-img">
+          </div>
+          <div class="artist-header">
+            <h3>Taylor Swift</h3>
+            <span class="genre-badge">Pop / Country / Folk</span>
+          </div>
         </div>
-    </header>
 
-    <main class="main-container">
-
-        <section id="realeza" class="section-card">
-            <div class="section-header">
-                <span class="chapter-tag">CAPÍTULO I</span>
-                <h2>1. As Rainhas do Pop: De Madonna a Taylor Swift</h2>
-                <div class="gold-line"></div>
+        <div class="artist-details">
+          <div class="info-grid">
+            <div class="info-box">
+              <strong>💿 Último Lançamento:</strong>
+              <p>The Tortured Poets Department</p>
             </div>
-
-            <div class="divas-selector">
-                <button class="diva-btn active" onclick="switchDiva(0)">Mariah Carey</button>
-                <button class="diva-btn" onclick="switchDiva(1)">Beyoncé</button>
-                <button class="diva-btn" onclick="switchDiva(2)">Taylor Swift</button>
-                <button class="diva-btn" onclick="switchDiva(3)">Lady Gaga</button>
-                <button class="diva-btn" onclick="switchDiva(4)">Miley Cyrus</button>
-                <button class="diva-btn" onclick="switchDiva(5)">K-Pop Divas</button>
+            <div class="info-box">
+              <strong>🏆 Prêmio Destaque:</strong>
+              <p>4x Vencedora do Grammy de Álbum do Ano</p>
             </div>
+          </div>
 
-            <div class="diva-profile-card">
-                <div class="grid-2col">
-                    <div class="royal-frame">
-                        <div class="img-preview-area">
-                            <img id="diva-portrait" src="https://assets.thetown.com.br/artistas/d4e99d7e-574e-4752-9d60-8f7ce860a2f5.jpg" alt="Diva Pop" class="loaded-img">
-                        </div>
-                    </div>
-                    
-                    <div class="diva-info">
-                        <span id="diva-tag" class="diva-tag">Soberana dos Vocais</span>
-                        <h3 id="diva-name" class="diva-name">Mariah Carey</h3>
-                        <p id="diva-desc" class="diva-description">
-                            Chegou com o alcance vocal de outro planeta, os melismas que viraram marca registrada e recordes absurdos de singles número 1 na Billboard (incluindo o eterno domínio natalino).
-                        </p>
+          <p class="bio-text">
+            Taylor Swift é uma das compositoras e cantoras mais influentes da história da música pop moderna, quebrando recordes mundiais de bilheteria e streaming.
+          </p>
 
-                        <div class="record-discs">
-                            <div class="disc-item">
-                                <i class="fa-solid fa-compact-disc gold-disc-icon"></i>
-                                <div>
-                                    <h4 id="diva-stat1">19 #1s</h4>
-                                    <small>Billboard Hot 100</small>
-                                </div>
-                            </div>
-                            <div class="disc-item">
-                                <i class="fa-solid fa-trophy gold-disc-icon"></i>
-                                <div>
-                                    <h4 id="diva-stat2">5 Octavas</h4>
-                                    <small>Alcance Vocal</small>
-                                </div>
-                            </div>
-                        </div>
+          <details class="accordion">
+            <summary>Ver Álbuns de Destaque</summary>
+            <table class="discography-table">
+              <thead>
+                <tr>
+                  <th>Álbum</th>
+                  <th>Ano</th>
+                  <th>Gênero</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1989 (Taylor's Version)</td>
+                  <td>2023</td>
+                  <td>Synth-pop</td>
+                </tr>
+                <tr>
+                  <td>Midnights</td>
+                  <td>2022</td>
+                  <td>Pop / Synth-pop</td>
+                </tr>
+                <tr>
+                  <td>Folklore</td>
+                  <td>2020</td>
+                  <td>Indie Folk / Alt-Pop</td>
+                </tr>
+              </tbody>
+            </table>
+          </details>
 
-                        <button class="acclaim-btn" onclick="addAcclaim()">
-                            <i class="fa-solid fa-heart"></i> Aclamar Rainha (<span id="acclaim-count">1284</span>)
-                        </button>
-                    </div>
-                </div>
+          <div class="link-wrapper">
+            <a href="https://www.taylorswift.com" target="_blank" class="btn-official">
+              🔗 Acessar Site Oficial de Taylor Swift
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="artist-card">
+        <div class="card-top">
+          <div class="img-wrapper">
+            <img src="https://via.placeholder.com/150/ffa502/ffffff?text=Beyoncé" alt="Beyoncé" class="profile-img">
+          </div>
+          <div class="artist-header">
+            <h3>Beyoncé</h3>
+            <span class="genre-badge">R&B / Pop / Dance</span>
+          </div>
+        </div>
+
+        <div class="artist-details">
+          <div class="info-grid">
+            <div class="info-box">
+              <strong>💿 Último Lançamento:</strong>
+              <p>COWBOY CARTER</p>
             </div>
-        </section>
-
-        <section id="videoclipes" class="section-card dark-blue-bg">
-            <div class="section-header">
-                <span class="chapter-tag">CAPÍTULO II</span>
-                <h2>2. A Era dos Videoclipes e a Identidade Visual</h2>
-                <div class="gold-line"></div>
+            <div class="info-box">
+              <strong>🏆 Prêmio Destaque:</strong>
+              <p>Artista mais premiada da história do Grammy</p>
             </div>
+          </div>
 
-            <div class="grid-2col">
-                <div>
-                    <p class="lead-text">
-                        Vamos ser sinceros: você consegue ouvir o início de <em>Bad Romance</em> da Lady Gaga sem visualizar mentalmente aqueles dançarinos de branco ou os olhos gigantes em computação gráfica? Provavelmente não. No mundo do pop feminino, a música entra pelos ouvidos, mas te conquista mesmo é pelos olhos.
-                    </p>
-                    <br>
-                    <p>A identidade visual é o que transforma uma música legal em um marco histórico. Pense nos clipes como curtas-metragens de moda e arte:</p>
-                    
-                    <ul class="visual-list">
-                        <li>
-                            <i class="fa-solid fa-wand-magic-sparkles gold-icon"></i>
-                            <div>
-                                <strong>Conceito é tudo:</strong> Desde os visuais futuristas e teatrais de Kate Bush até a estética colegial dos anos 2000 e o maximalismo neon do K-pop.
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-palette gold-icon"></i>
-                            <div>
-                                <strong>Paleta de cores:</strong> Cada álbum tem sua própria "identidade de marca". Se a era é triste, o clipe é cinza ou azul; se é frita e dançante, joga neon em tudo!
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-bolt gold-icon"></i>
-                            <div>
-                                <strong>O fator choque:</strong> Looks como o vestido de carne da Gaga, as referências cinematográficas de <em>Thank U, Next</em> da Ariana Grande ou as coreografias milimetricamente calculadas de BLACKPINK quebram a internet.
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+          <p class="bio-text">
+            Reconhecida globalmente por seus vocais impecáveis e performances históricas, Beyoncé revolucionou a indústria com lançamentos visuais e álbuns conceituais.
+          </p>
 
-                <div class="royal-frame">
-                    <div class="img-preview-area">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuqZTrPQoNxdbg-LI3cVEXI8d9_LWhauYepRyT0gNifU9mLyopT7ojCH0&s=10" alt="Show do Pop" class="loaded-img">
-                    </div>
-                    <div class="caption-box">
-                        <i class="fa-solid fa-camera"></i> Estética e Espetáculo ao Vivo
-                    </div>
-                </div>
+          <details class="accordion">
+            <summary>Ver Álbuns de Destaque</summary>
+            <table class="discography-table">
+              <thead>
+                <tr>
+                  <th>Álbum</th>
+                  <th>Ano</th>
+                  <th>Gênero</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>COWBOY CARTER</td>
+                  <td>2024</td>
+                  <td>Country / R&B</td>
+                </tr>
+                <tr>
+                  <td>RENAISSANCE</td>
+                  <td>2022</td>
+                  <td>House / Dance</td>
+                </tr>
+                <tr>
+                  <td>Lemonade</td>
+                  <td>2016</td>
+                  <td>R&B / Urban</td>
+                </tr>
+              </tbody>
+            </table>
+          </details>
+
+          <div class="link-wrapper">
+            <a href="https://www.beyonce.com" target="_blank" class="btn-official">
+              🔗 Acessar Site Oficial de Beyoncé
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="artist-card">
+        <div class="card-top">
+          <div class="img-wrapper">
+            <img src="https://via.placeholder.com/150/70a1ff/ffffff?text=Rihanna" alt="Rihanna" class="profile-img">
+          </div>
+          <div class="artist-header">
+            <h3>Rihanna</h3>
+            <span class="genre-badge">Pop / R&B / Reggae</span>
+          </div>
+        </div>
+
+        <div class="artist-details">
+          <div class="info-grid">
+            <div class="info-box">
+              <strong>💿 Álbum Destaque:</strong>
+              <p>ANTI</p>
             </div>
-        </section>
-
-        <section id="bastidores" class="section-card">
-            <div class="section-header">
-                <span class="chapter-tag">CAPÍTULO III</span>
-                <h2>3. Bastidores: Mulheres na Produção e Composição</h2>
-                <div class="gold-line"></div>
+            <div class="info-box">
+              <strong>🏆 Prêmio Destaque:</strong>
+              <p>Icon Award & Múltiplos Grammys</p>
             </div>
+          </div>
 
-            <p class="center-subtitle">
-                Existe um mito muito antigo — e bem ultrapassado — de que as divas pop entram no estúdio, recebem uma música pronta de um produtor engravatado, cantam e vão embora. Alerta de spoiler: a realidade é bem diferente e muito mais foda.
-            </p>
+          <p class="bio-text">
+            Uma das artistas mais vendidas de todos os tempos, Rihanna transita entre hinos Pop inesquecíveis e um império global na indústria da moda e beleza.
+          </p>
 
-            <div class="producers-grid">
-                <div class="producer-card">
-                    <i class="fa-solid fa-headphones-simple card-icon"></i>
-                    <h3>Billie Eilish</h3>
-                    <p>Revolucionou a sonoridade do pop moderno gravando músicas no quarto de casa com o irmão, introduzindo o minimalismo grave que domina as paradas.</p>
-                </div>
-                <div class="producer-card">
-                    <i class="fa-solid fa-guitar card-icon"></i>
-                    <h3>Olivia Rodrigo</h3>
-                    <p>Transforma dramas adolescentes em hinos de rock-pop visceral que todo mundo canta gritando no carro, tudo assinado e composto por ela.</p>
-                </div>
-                <div class="producer-card">
-                    <i class="fa-solid fa-pen-nib card-icon"></i>
-                    <h3>Taylor Swift</h3>
-                    <p>É considerada uma das maiores compositoras da sua geração, escrevendo pontes de canções que parecem poesias complexas e arquiteturas narrativas.</p>
-                </div>
-                <div class="producer-card">
-                    <i class="fa-solid fa-sliders card-icon"></i>
-                    <h3>Mariah Carey</h3>
-                    <p>Não só cantava, como co-escrevia e produzia boa parte do material que virou padrão de arranjo e harmonia vocal na história do R&B e Pop.</p>
-                </div>
+          <details class="accordion">
+            <summary>Ver Álbuns de Destaque</summary>
+            <table class="discography-table">
+              <thead>
+                <tr>
+                  <th>Álbum</th>
+                  <th>Ano</th>
+                  <th>Gênero</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>ANTI</td>
+                  <td>2016</td>
+                  <td>R&B / Pop</td>
+                </tr>
+                <tr>
+                  <td>Unapologetic</td>
+                  <td>2012</td>
+                  <td>Pop / Dance</td>
+                </tr>
+                <tr>
+                  <td>Loud</td>
+                  <td>2010</td>
+                  <td>Dance-pop</td>
+                </tr>
+              </tbody>
+            </table>
+          </details>
+
+          <div class="link-wrapper">
+            <a href="https://www.rihanna.com" target="_blank" class="btn-official">
+              🔗 Acessar Site Oficial de Rihanna
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <section id="videoclipes" class="section-block video-section">
+      <div class="section-title white-text">
+        <h2>🎬 Análise de Videoclipes Icônicos</h2>
+        <p>Conteúdo exclusivo focado na direção, conceito visual e produção (Sem Imagens).</p>
+      </div>
+
+      <div class="video-grid">
+        <div class="video-card-text">
+          <span class="tag">Taylor Swift</span>
+          <h3>Fortnight (feat. Post Malone)</h3>
+          <p><strong>Direção:</strong> Taylor Swift</p>
+          <p class="video-desc">Um registro cinematográfico em preto e branco com estética vitoriana e surrealista. Explora sentimentos de melancolia e libertação através de efeitos de laboratório e metáforas visuais.</p>
+        </div>
+
+        <div class="video-card-text">
+          <span class="tag">Beyoncé</span>
+          <h3>TEXAS HOLD 'EM</h3>
+          <p><strong>Conceito:</strong> Visual Album Exclusivo</p>
+          <p class="video-desc">Inspirado na cultura country afro-americana, a produção celebra o ritmo, a dança de salão e a instrumentação tradicional do banjo com uma estética vibrante e cheia de energia.</p>
+        </div>
+
+        <div class="video-card-text">
+          <span class="tag">Rihanna</span>
+          <h3>Work (feat. Drake)</h3>
+          <p><strong>Direção:</strong> Director X / Tim Erem</p>
+          <p class="video-desc">Dividido em duas partes, o clipe combina a energia calorosa de uma festa dancehall no ambiente 'Real Jerk' com uma segunda parte intimista banhada por luzes neon e rosa.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="shows" class="section-block show-section">
+      <div class="section-title">
+        <h2>🎤 Área do Show & Fandoms</h2>
+        <p>Os maiores espetáculos do mundo e a paixão das comunidades de fãs.</p>
+      </div>
+
+      <div class="show-container">
+        <div class="show-media">
+          <img src="https://via.placeholder.com/800x400?text=Taylor+Swift+The+Eras+Tour+Live" alt="Taylor Swift na The Eras Tour" class="show-banner">
+          <span class="caption">Turnê Histórica: The Eras Tour - Taylor Swift ao vivo em estádio lotado</span>
+        </div>
+
+        <div class="show-info-box">
+          <h3>A Maior Turnê da Década</h3>
+          <p>Com mais de 3 horas de duração, figurinos deslumbrantes e efeitos especiais, o espetáculo percorre todas as fases da carreira de Taylor Swift, reunindo gerações de fãs e quebrando recordes em todos os continentes.</p>
+          
+          <div class="stats-row">
+            <div class="stat-item">
+              <span class="stat-number">3h+</span>
+              <span class="stat-label">Duração do Show</span>
             </div>
-        </section>
-
-        <section id="fandoms" class="section-card dark-blue-bg">
-            <div class="section-header">
-                <span class="chapter-tag">CAPÍTULO IV</span>
-                <h2>4. O Fenômeno dos Fandoms Globais (e dos Recordes)</h2>
-                <div class="gold-line"></div>
+            <div class="stat-item">
+              <span class="stat-number">44+</span>
+              <span class="stat-label">Músicas por Noite</span>
             </div>
-
-            <p>Se você acha que o mercado financeiro de Wall Street é organizado, é porque nunca viu um mutirão de votação de um fandom pop. Swifties, Beyhive, Blinks, Arianators e ARMY não são apenas fãs; eles são quase uma inteligência geopolítica altamente treinada.</p>
-
-            <div class="accordion-group">
-                <div class="acc-item open">
-                    <div class="acc-header" onclick="toggleAcc(this)">
-                        <span><i class="fa-solid fa-chart-line"></i> Derrubar Recordes Absolutos</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <div class="acc-body">
-                        Conseguir milhões de visualizações em clipes nas primeiras 24 horas, quebrar recordes de streaming no Spotify e Billboard, e fazer álbuns debutarem em primeiro lugar em dezenas de países ao mesmo tempo.
-                    </div>
-                </div>
-
-                <div class="acc-item">
-                    <div class="acc-header" onclick="toggleAcc(this)">
-                        <span><i class="fa-solid fa-magnifying-glass"></i> Análise Forense de Easter Eggs</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <div class="acc-body">
-                        Estudar cada post, roupa, timestamp e paleta de cores das artistas em busca de pistas escondidas sobre os próximos lançamentos e anúncios de novas eras.
-                    </div>
-                </div>
-
-                <div class="acc-item">
-                    <div class="acc-header" onclick="toggleAcc(this)">
-                        <span><i class="fa-solid fa-ticket"></i> Mobilização e Esgotamento de Estádios</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <div class="acc-body">
-                        Acampar por dias, organizar pulseiras de amizade, inflacionar economias locais e derrubar sites de ingressos em minutos — as turnês mundiais das rainhas são provas vivas disso.
-                    </div>
-                </div>
+            <div class="stat-item">
+              <span class="stat-number">10</span>
+              <span class="stat-label">Eras Representadas</span>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <div class="fandom-badges">
-                <span class="f-pill">#SWIFTIES</span>
-                <span class="f-pill">#BEYHIVE</span>
-                <span class="f-pill">#BLINKS</span>
-                <span class="f-pill">#ARIANATORS</span>
-                <span class="f-pill">#LITTLEMONSTERS</span>
-                <span class="f-pill">#ARMY</span>
-                <span class="f-pill">#SMILERS</span>
-            </div>
-        </section>
+    <section id="fanzone" class="section-block fanzone-section">
+      <div class="section-title">
+        <h2>💬 Fan Zone & Comunidade</h2>
+        <p>Deixe seu recado, escolha sua era favorita e participe da nossa votação!</p>
+      </div>
 
-    </main>
+      <form class="fan-form" action="#" method="get" onclick="return false;">
+        <div class="form-group">
+          <label for="fan-name">Seu Nome / Nickname:</label>
+          <input type="text" id="fan-name" placeholder="Ex: Swiftie2026" required>
+        </div>
 
-    <footer class="main-footer">
-        <p><i class="fa-solid fa-crown gold-icon"></i> Imperial Pop Dynasty — Desenvolvido para o GitHub</p>
-        <small>Celebrando a força, arte e impacto das mulheres na indústria musical global.</small>
-    </footer>
+        <div class="form-group">
+          <label for="fav-artist">Sua Artista Favorita:</label>
+          <select id="fav-artist">
+            <option value="taylor">Taylor Swift</option>
+            <option value="beyonce">Beyoncé</option>
+            <option value="rihanna">Rihanna</option>
+          </select>
+        </div>
 
-    <script src="script.js"></script>
+        <div class="form-group">
+          <label for="message">Mensagem para o Fandom:</label>
+          <textarea id="message" rows="4" placeholder="Escreva uma mensagem cheia de energia positiva para os outros fãs! ✨"></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Enviar para a Comunidade 🎉</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      
+      <div class="footer-brand">
+        <h3 class="footer-logo">✨ Pop Universe</h3>
+        <p>Sua plataforma completa de informações, estatísticas e curiosidades sobre o universo pop global.</p>
+      </div>
+
+      <div class="footer-nav">
+        <h4>Navegação Rápida</h4>
+        <ul>
+          <li><a href="#artistas">Artistas</a></li>
+          <li><a href="#videoclipes">Videoclipes</a></li>
+          <li><a href="#shows">Turnês & Shows</a></li>
+          <li><a href="#fanzone">Fan Zone</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-credits">
+        <h4>Créditos e Produção</h4>
+        <p class="dev-text">Desenvolvido por <strong>Bruno e Davi</strong></p>
+        <div class="tag-badge">Turma: 1TB2026</div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Pop Universe | Projeto Escolar / Acadêmico | Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
 </body>
 </html>
