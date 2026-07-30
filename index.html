@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pop Divas: Imperial Dynasty ✨👑</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Imperial Pop Dynasty — A Era das Rainhas</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800;900&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -17,338 +19,227 @@
     <nav class="navbar">
         <div class="logo">
             <i class="fa-solid fa-crown gold-icon"></i>
-            <span>IMPERIAL<strong>POP</strong></span>
+            <span class="gold-text-gradient">POP DYNASTY</span>
         </div>
         <ul class="nav-links">
-            <li><a href="#galeria-divas"><i class="fa-solid fa-gem"></i> As Divas</a></li>
-            <li><a href="#temas"><i class="fa-solid fa-compact-disc"></i> Temas & Clipes</a></li>
-            <li><a href="#fandoms"><i class="fa-solid fa-fire"></i> Fandoms</a></li>
+            <li><a href="#realeza"><i class="fa-solid fa-gem"></i> As Rainhas</a></li>
+            <li><a href="#videoclipes"><i class="fa-solid fa-film"></i> Identidade Visual</a></li>
+            <li><a href="#bastidores"><i class="fa-solid fa-sliders"></i> Composição</a></li>
+            <li><a href="#fandoms"><i class="fa-solid fa-users"></i> Fandoms</a></li>
         </ul>
-        <button class="gold-btn-sm" onclick="toggleGlowMode()">
-            <i class="fa-solid fa-sparkles"></i> Mudar Aura (Cyber/Ouro)
+        <button id="theme-toggle" class="gold-btn-sm">
+            <i class="fa-solid fa-bolt"></i> Modo Cyber
         </button>
     </nav>
 
     <header class="hero">
         <div class="hero-content">
-            <span class="gold-badge"><i class="fa-solid fa-crown"></i> Galeria Interativa com Carregamento de Imagem</span>
-            <h1>SANTUÁRIO IMPERIAL DAS <br><span class="gold-text-gradient">DIVAS DO POP</span></h1>
-            <p>Selecione a sua cantora, cole o link de qualquer foto da internet e veja o portal se transformar instantaneamente!</p>
+            <span class="gold-badge"><i class="fa-solid fa-record-vinyl"></i> Arquivos da Música Pop</span>
+            <h1>A Linhagem Sagrada das <span class="gold-text-gradient">Imperatrizes do Pop</span></h1>
+            <p>De reinvenções radicais a quebras de recordes globais: uma imersão na engenharia sonora, visual e cultural das mulheres que moldaram gerações.</p>
         </div>
     </header>
 
     <main class="main-container">
 
-        <section id="galeria-divas" class="section-card">
+        <section id="realeza" class="section-card">
             <div class="section-header">
-                <span class="chapter-tag">Portal das Artistas</span>
-                <h2>1. Escolha a Diva & Cole a Foto</h2>
+                <span class="chapter-tag">CAPÍTULO I</span>
+                <h2>1. As Rainhas do Pop: De Madonna a Taylor Swift</h2>
                 <div class="gold-line"></div>
             </div>
 
             <div class="divas-selector">
-                <button class="diva-btn active" onclick="carregarDiva('mariah', this)"><i class="fa-solid fa-microphone"></i> Mariah Carey</button>
-                <button class="diva-btn" onclick="carregarDiva('beyonce', this)"><i class="fa-solid fa-crown"></i> Beyoncé</button>
-                <button class="diva-btn" onclick="carregarDiva('taylor', this)"><i class="fa-solid fa-music"></i> Taylor Swift</button>
-                <button class="diva-btn" onclick="carregarDiva('gaga', this)"><i class="fa-solid fa-wand-magic-sparkles"></i> Lady Gaga</button>
-                <button class="diva-btn" onclick="carregarDiva('miley', this)"><i class="fa-solid fa-bolt"></i> Miley Cyrus</button>
-                <button class="diva-btn" onclick="carregarDiva('kpop', this)"><i class="fa-solid fa-compact-disc"></i> K-Pop Divas</button>
+                <button class="diva-btn active" onclick="switchDiva(0)">Mariah Carey</button>
+                <button class="diva-btn" onclick="switchDiva(1)">Beyoncé</button>
+                <button class="diva-btn" onclick="switchDiva(2)">Taylor Swift</button>
+                <button class="diva-btn" onclick="switchDiva(3)">Lady Gaga</button>
+                <button class="diva-btn" onclick="switchDiva(4)">Miley Cyrus</button>
+                <button class="diva-btn" onclick="switchDiva(5)">K-Pop Divas</button>
             </div>
 
-            <div class="diva-profile-card" id="diva-card">
+            <div class="diva-profile-card">
                 <div class="grid-2col">
-                    
-                    <div class="image-box-container">
-                        <div class="royal-frame">
-                            <div class="img-preview-area" id="img-display">
-                                <i class="fa-solid fa-user-astronaut img-icon-fallback" id="diva-icon"></i>
-                                <span class="placeholder-text" id="img-status-text">Nenhuma imagem carregada</span>
-                            </div>
-                        </div>
-
-                        <div class="url-input-box">
-                            <i class="fa-solid fa-link gold-icon"></i>
-                            <input type="text" id="img-url-input" placeholder="Cole o link da foto (URL) aqui..." oninput="atualizarFotoViaInput()">
-                            <button class="btn-input-apply" onclick="atualizarFotoViaInput()"><i class="fa-solid fa-check"></i></button>
+                    <div class="royal-frame">
+                        <div class="img-preview-area">
+                            <img id="diva-portrait" src="https://assets.thetown.com.br/artistas/d4e99d7e-574e-4752-9d60-8f7ce860a2f5.jpg" alt="Diva Pop" class="loaded-img">
                         </div>
                     </div>
-
-                    <div class="text-block">
-                        <div class="diva-header-info">
-                            <h3 class="diva-name" id="diva-name">Mariah Carey</h3>
-                            <span class="diva-tag" id="diva-tag">Soberana dos Vocais & Natal</span>
-                        </div>
-
+                    
+                    <div class="diva-info">
+                        <span id="diva-tag" class="diva-tag">Soberana dos Vocais</span>
+                        <h3 id="diva-name" class="diva-name">Mariah Carey</h3>
                         <p id="diva-desc" class="diva-description">
-                            Chegou com o alcance vocal de outro planeta, os melismas que viraram marca registrada e recordes absurdos de singles número 1 na Billboard.
+                            Chegou com o alcance vocal de outro planeta, os melismas que viraram marca registrada e recordes absurdos de singles número 1 na Billboard (incluindo o eterno domínio natalino).
                         </p>
 
                         <div class="record-discs">
                             <div class="disc-item">
                                 <i class="fa-solid fa-compact-disc gold-disc-icon"></i>
                                 <div>
-                                    <h4 id="stat1-val">19</h4>
-                                    <small id="stat1-lbl">Singles em Nº 1</small>
+                                    <h4 id="diva-stat1">19 #1s</h4>
+                                    <small>Billboard Hot 100</small>
                                 </div>
                             </div>
                             <div class="disc-item">
-                                <i class="fa-solid fa-compact-disc gold-disc-icon"></i>
+                                <i class="fa-solid fa-trophy gold-disc-icon"></i>
                                 <div>
-                                    <h4 id="stat2-val">5 Octaves</h4>
-                                    <small id="stat2-lbl">Alcance Vocal</small>
+                                    <h4 id="diva-stat2">5 Octavas</h4>
+                                    <small>Alcance Vocal</small>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="interactive-actions">
-                            <button class="acclaim-btn" onclick="aclamarDiva()">
-                                <i class="fa-solid fa-heart"></i> Aclamar Esta Era (<span id="acclaim-count">3.420</span>)
-                            </button>
-                        </div>
-
+                        <button class="acclaim-btn" onclick="addAcclaim()">
+                            <i class="fa-solid fa-heart"></i> Aclamar Rainha (<span id="acclaim-count">1284</span>)
+                        </button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="temas" class="section-card dark-blue-bg">
+        <section id="videoclipes" class="section-card dark-blue-bg">
             <div class="section-header">
-                <span class="chapter-tag">Capítulo 02</span>
-                <h2>2. Temas & Estética dos Videoclipes</h2>
-                <div class="gold-line"></div>
-            </div>
-
-            <div class="grid-2col reverse-grid">
-                <div class="image-box-container">
-                    <div class="royal-frame">
-                        <div class="img-preview-area" id="tema-img-display">
-                            <i class="fa-solid fa-film img-icon-fallback"></i>
-                            <span class="placeholder-text">Estética & Videoclipes</span>
-                        </div>
-                    </div>
-                    <div class="url-input-box">
-                        <i class="fa-solid fa-link gold-icon"></i>
-                        <input type="text" id="tema-url-input" placeholder="Cole o link da foto de videoclipe..." oninput="carregarImagemGenerica('tema-img-display', this.value)">
-                    </div>
-                </div>
-
-                <div class="text-block">
-                    <p class="lead-text">
-                        No pop, a música entra pelos ouvidos, mas conquista mesmo é pelos olhos. Cada videoclipe é um espetáculo cinematográfico!
-                    </p>
-
-                    <div class="accordion-group">
-                        <div class="acc-item" onclick="toggleAcc(this)">
-                            <div class="acc-header">
-                                <span><i class="fa-solid fa-wand-magic-sparkles"></i> Conceitos Marcantes</span>
-                                <i class="fa-solid fa-chevron-down acc-arrow"></i>
-                            </div>
-                            <div class="acc-body">
-                                <p>Dos visuais de ficção científica aos figurinos de alta costura que redefinem a moda global!</p>
-                            </div>
-                        </div>
-                        <div class="acc-item" onclick="toggleAcc(this)">
-                            <div class="acc-header">
-                                <span><i class="fa-solid fa-palette"></i> Paletas de Cores</span>
-                                <i class="fa-solid fa-chevron-down acc-arrow"></i>
-                            </div>
-                            <div class="acc-body">
-                                <p>Cores neon para hinos dançantes, e tons frios para faixas de profunda vulnerabilidade.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="fandoms" class="section-card">
-            <div class="section-header">
-                <span class="chapter-tag">Capítulo 03</span>
-                <h2>3. O Poder Incomparável dos Fandoms</h2>
+                <span class="chapter-tag">CAPÍTULO II</span>
+                <h2>2. A Era dos Videoclipes e a Identidade Visual</h2>
                 <div class="gold-line"></div>
             </div>
 
             <div class="grid-2col">
-                <div class="text-block">
+                <div>
                     <p class="lead-text">
-                        Os fãs são a verdadeira força motriz por trás de cada recorde mundial no Spotify, YouTube e em estádios lotados!
+                        Vamos ser sinceros: você consegue ouvir o início de <em>Bad Romance</em> da Lady Gaga sem visualizar mentalmente aqueles dançarinos de branco ou os olhos gigantes em computação gráfica? Provavelmente não. No mundo do pop feminino, a música entra pelos ouvidos, mas te conquista mesmo é pelos olhos.
                     </p>
-                    <div class="fandom-badges">
-                        <span class="f-pill">Swifties</span>
-                        <span class="f-pill">Beyhive</span>
-                        <span class="f-pill">Blinks</span>
-                        <span class="f-pill">Little Monsters</span>
-                        <span class="f-pill">ARMY</span>
+                    <br>
+                    <p>A identidade visual é o que transforma uma música legal em um marco histórico. Pense nos clipes como curtas-metragens de moda e arte:</p>
+                    
+                    <ul class="visual-list">
+                        <li>
+                            <i class="fa-solid fa-wand-magic-sparkles gold-icon"></i>
+                            <div>
+                                <strong>Conceito é tudo:</strong> Desde os visuais futuristas e teatrais de Kate Bush até a estética colegial dos anos 2000 e o maximalismo neon do K-pop.
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-palette gold-icon"></i>
+                            <div>
+                                <strong>Paleta de cores:</strong> Cada álbum tem sua própria "identidade de marca". Se a era é triste, o clipe é cinza ou azul; se é frita e dançante, joga neon em tudo!
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-bolt gold-icon"></i>
+                            <div>
+                                <strong>O fator choque:</strong> Looks como o vestido de carne da Gaga, as referências cinematográficas de <em>Thank U, Next</em> da Ariana Grande ou as coreografias milimetricamente calculadas de BLACKPINK quebram a internet.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="royal-frame">
+                    <div class="img-preview-area">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuqZTrPQoNxdbg-LI3cVEXI8d9_LWhauYepRyT0gNifU9mLyopT7ojCH0&s=10" alt="Show do Pop" class="loaded-img">
+                    </div>
+                    <div class="caption-box">
+                        <i class="fa-solid fa-camera"></i> Estética e Espetáculo ao Vivo
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="bastidores" class="section-card">
+            <div class="section-header">
+                <span class="chapter-tag">CAPÍTULO III</span>
+                <h2>3. Bastidores: Mulheres na Produção e Composição</h2>
+                <div class="gold-line"></div>
+            </div>
+
+            <p class="center-subtitle">
+                Existe um mito muito antigo — e bem ultrapassado — de que as divas pop entram no estúdio, recebem uma música pronta de um produtor engravatado, cantam e vão embora. Alerta de spoiler: a realidade é bem diferente e muito mais foda.
+            </p>
+
+            <div class="producers-grid">
+                <div class="producer-card">
+                    <i class="fa-solid fa-headphones-simple card-icon"></i>
+                    <h3>Billie Eilish</h3>
+                    <p>Revolucionou a sonoridade do pop moderno gravando músicas no quarto de casa com o irmão, introduzindo o minimalismo grave que domina as paradas.</p>
+                </div>
+                <div class="producer-card">
+                    <i class="fa-solid fa-guitar card-icon"></i>
+                    <h3>Olivia Rodrigo</h3>
+                    <p>Transforma dramas adolescentes em hinos de rock-pop visceral que todo mundo canta gritando no carro, tudo assinado e composto por ela.</p>
+                </div>
+                <div class="producer-card">
+                    <i class="fa-solid fa-pen-nib card-icon"></i>
+                    <h3>Taylor Swift</h3>
+                    <p>É considerada uma das maiores compositoras da sua geração, escrevendo pontes de canções que parecem poesias complexas e arquiteturas narrativas.</p>
+                </div>
+                <div class="producer-card">
+                    <i class="fa-solid fa-sliders card-icon"></i>
+                    <h3>Mariah Carey</h3>
+                    <p>Não só cantava, como co-escrevia e produzia boa parte do material que virou padrão de arranjo e harmonia vocal na história do R&B e Pop.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="fandoms" class="section-card dark-blue-bg">
+            <div class="section-header">
+                <span class="chapter-tag">CAPÍTULO IV</span>
+                <h2>4. O Fenômeno dos Fandoms Globais (e dos Recordes)</h2>
+                <div class="gold-line"></div>
+            </div>
+
+            <p>Se você acha que o mercado financeiro de Wall Street é organizado, é porque nunca viu um mutirão de votação de um fandom pop. Swifties, Beyhive, Blinks, Arianators e ARMY não são apenas fãs; eles são quase uma inteligência geopolítica altamente treinada.</p>
+
+            <div class="accordion-group">
+                <div class="acc-item open">
+                    <div class="acc-header" onclick="toggleAcc(this)">
+                        <span><i class="fa-solid fa-chart-line"></i> Derrubar Recordes Absolutos</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="acc-body">
+                        Conseguir milhões de visualizações em clipes nas primeiras 24 horas, quebrar recordes de streaming no Spotify e Billboard, e fazer álbuns debutarem em primeiro lugar em dezenas de países ao mesmo tempo.
                     </div>
                 </div>
 
-                <div class="image-box-container">
-                    <div class="royal-frame">
-                        <div class="img-preview-area" id="fandom-img-display">
-                            <i class="fa-solid fa-users-rays img-icon-fallback"></i>
-                            <span class="placeholder-text">Shows & Estádios Lotados</span>
-                        </div>
+                <div class="acc-item">
+                    <div class="acc-header" onclick="toggleAcc(this)">
+                        <span><i class="fa-solid fa-magnifying-glass"></i> Análise Forense de Easter Eggs</span>
+                        <i class="fa-solid fa-chevron-down"></i>
                     </div>
-                    <div class="url-input-box">
-                        <i class="fa-solid fa-link gold-icon"></i>
-                        <input type="text" id="fandom-url-input" placeholder="Cole o link da foto do fandom/show..." oninput="carregarImagemGenerica('fandom-img-display', this.value)">
+                    <div class="acc-body">
+                        Estudar cada post, roupa, timestamp e paleta de cores das artistas em busca de pistas escondidas sobre os próximos lançamentos e anúncios de novas eras.
                     </div>
                 </div>
+
+                <div class="acc-item">
+                    <div class="acc-header" onclick="toggleAcc(this)">
+                        <span><i class="fa-solid fa-ticket"></i> Mobilização e Esgotamento de Estádios</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="acc-body">
+                        Acampar por dias, organizar pulseiras de amizade, inflacionar economias locais e derrubar sites de ingressos em minutos — as turnês mundiais das rainhas são provas vivas disso.
+                    </div>
+                </div>
+            </div>
+
+            <div class="fandom-badges">
+                <span class="f-pill">#SWIFTIES</span>
+                <span class="f-pill">#BEYHIVE</span>
+                <span class="f-pill">#BLINKS</span>
+                <span class="f-pill">#ARIANATORS</span>
+                <span class="f-pill">#LITTLEMONSTERS</span>
+                <span class="f-pill">#ARMY</span>
+                <span class="f-pill">#SMILERS</span>
             </div>
         </section>
 
     </main>
 
     <footer class="main-footer">
-        <p>&copy; 2026 - Desenvolvido por: Davi e Bruno - Turma 1TB</p>
+        <p><i class="fa-solid fa-crown gold-icon"></i> Imperial Pop Dynasty — Desenvolvido para o GitHub</p>
+        <small>Celebrando a força, arte e impacto das mulheres na indústria musical global.</small>
     </footer>
 
-    <script>
-        // Banco de Dados das Artistas
-        const divasData = {
-            mariah: {
-                nome: "Mariah Carey",
-                tag: "👑 Rainha do R&B e Vocal de 5 Oitavas",
-                desc: "Chegou com o alcance vocal de outro planeta, os melismas que viraram marca registrada e recordes absurdos de singles número 1 na Billboard.",
-                val1: "19",
-                lbl1: "Singles Nº 1",
-                val2: "5 Octaves",
-                lbl2: "Alcance Vocal",
-                icon: "fa-microphone",
-                fotoPadrao: ""
-            },
-            beyonce: {
-                nome: "Beyoncé",
-                tag: "🐝 Queen Bey & Performance Absoluta",
-                desc: "Transformou o palco em um evento olímpico, dominando vocais, dança rigorosa e narrativas visuais históricas como Renaissance.",
-                val1: "32",
-                lbl1: "Grammys Conquistados",
-                val2: "100M+",
-                lbl2: "Vendas Globais",
-                icon: "fa-crown",
-                fotoPadrao: ""
-            },
-            taylor: {
-                nome: "Taylor Swift",
-                tag: "📜 Mestre das Composições & Eras",
-                desc: "Construiu um império escrevendo letras poéticas que conectam milhões de pessoas, quebrando recordes históricos em turnês mundiais.",
-                val1: "4x",
-                lbl1: "Álbum do Ano (Grammy)",
-                val2: "$1B+",
-                lbl2: "Arrecadação Eras Tour",
-                icon: "fa-music",
-                fotoPadrao: ""
-            },
-            gaga: {
-                nome: "Lady Gaga",
-                tag: "✨ Visuais Teatrais & Ousadia",
-                desc: "Revolucionou os videoclipes e a moda pop com conceitos extravagantes, vocais operísticos e versatilidade artística única.",
-                val1: "13",
-                lbl1: "Prêmios Grammy",
-                val2: "Oscar",
-                lbl2: "Melhor Canção",
-                icon: "fa-wand-magic-sparkles",
-                fotoPadrao: ""
-            },
-            miley: {
-                nome: "Miley Cyrus",
-                tag: "⚡ Camaleoa & Ícone Rock-Pop",
-                desc: "Rainha das reivenções: passou por todas as fases do pop e dominou as paradas globais com vocais marcantes e atitude sem filtros.",
-                val1: "1B+",
-                lbl1: "Streams em Flowers",
-                val2: "20+ Anos",
-                val2Lbl: "De Carreira",
-                icon: "fa-bolt",
-                fotoPadrao: ""
-            },
-            kpop: {
-                nome: "K-Pop Divas",
-                tag: "🌐 O Fenômeno Global",
-                desc: "Grupos e soloistas que dominam o mundo com coreografias impecáveis, produções bilionárias e recordes massivos de streaming.",
-                val1: "90M+",
-                lbl1: "Inscritos no YouTube",
-                val2: "Top 1",
-                lbl2: "Global Spotify",
-                icon: "fa-compact-disc",
-                fotoPadrao: ""
-            }
-        };
-
-        let divaAtual = 'mariah';
-
-        function carregarDiva(chave, elemento) {
-            document.querySelectorAll('.diva-btn').forEach(b => b.classList.remove('active'));
-            elemento.classList.add('active');
-
-            divaAtual = chave;
-            const data = divasData[chave];
-            const card = document.getElementById('diva-card');
-
-            card.style.opacity = '0';
-
-            setTimeout(() => {
-                document.getElementById('diva-name').innerText = data.nome;
-                document.getElementById('diva-tag').innerText = data.tag;
-                document.getElementById('diva-desc').innerText = data.desc;
-                document.getElementById('stat1-val').innerText = data.val1;
-                document.getElementById('stat1-lbl').innerText = data.lbl1;
-                document.getElementById('stat2-val').innerText = data.val2;
-                document.getElementById('stat2-lbl').innerText = data.lbl2;
-
-                // Limpa o input e atualiza imagem
-                document.getElementById('img-url-input').value = data.fotoPadrao || '';
-                atualizarFotoViaInput();
-
-                card.style.opacity = '1';
-            }, 150);
-        }
-
-        // Função principal que lê a URL e exibe a imagem
-        function atualizarFotoViaInput() {
-            const url = document.getElementById('img-url-input').value.trim();
-            const display = document.getElementById('img-display');
-            const data = divasData[divaAtual];
-
-            if (url !== '') {
-                display.innerHTML = `<img src="${url}" alt="Foto da Cantora" class="loaded-img" onerror="tratarErroImagem()">`;
-                data.fotoPadrao = url; // Guarda a URL no banco local
-            } else {
-                display.innerHTML = `
-                    <i class="fa-solid ${data.icon} img-icon-fallback"></i>
-                    <span class="placeholder-text">Cole o link de uma foto acima para exibir!</span>
-                `;
-            }
-        }
-
-        function tratarErroImagem() {
-            const display = document.getElementById('img-display');
-            display.innerHTML = `
-                <i class="fa-solid fa-triangle-exclamation img-icon-fallback" style="color: #ff4757;"></i>
-                <span class="placeholder-text" style="color: #ff4757;">Link de imagem inválido! Tente outro link.</span>
-            `;
-        }
-
-        // Função genérica para carregar foto de outras seções
-        function carregarImagemGenerica(containerId, url) {
-            const display = document.getElementById(containerId);
-            if (url.trim() !== '') {
-                display.innerHTML = `<img src="${url}" class="loaded-img" onerror="this.src=''; alert('Link de imagem inválido!');">`;
-            }
-        }
-
-        function aclamarDiva() {
-            const cnt = document.getElementById('acclaim-count');
-            let num = parseInt(cnt.innerText.replace('.', ''));
-            cnt.innerText = (num + 1).toLocaleString('pt-BR');
-        }
-
-        function toggleAcc(el) {
-            el.classList.toggle('open');
-        }
-
-        function toggleGlowMode() {
-            document.body.classList.toggle('cyber-mode');
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
