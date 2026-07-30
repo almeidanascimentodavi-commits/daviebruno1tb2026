@@ -3,282 +3,234 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pop Universe - O Império das Divas Pop</title>
+  <title>Pop Universe | O Império das Divas</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <header class="main-header">
-    <nav class="navbar">
-      <div class="logo">✨ Pop Universe</div>
+  <header class="header">
+    <div class="nav-container">
+      <div class="logo">✨ POP UNIVERSE</div>
       
-      <div class="theme-switch-container">
-        <input type="checkbox" id="theme-toggle" class="theme-toggle-checkbox">
-        <label for="theme-toggle" class="theme-btn">
-          🎨 Alternar Tema (Azul/Dourado ⇄ Azul Claro/Escuro)
-        </label>
+      <div class="aura-switch">
+        <input type="checkbox" id="aura-toggle">
+        <label for="aura-toggle" class="aura-label">✨ Alterar Aura</label>
       </div>
 
       <ul class="nav-links">
-        <li><a href="#rainhas">Rainhas do Pop</a></li>
+        <li><a href="#rainhas">Rainhas</a></li>
         <li><a href="#clipes">Videoclipes</a></li>
         <li><a href="#bastidores">Bastidores</a></li>
         <li><a href="#fandoms">Fandoms</a></li>
       </ul>
-    </nav>
-
-    <div class="hero-text">
-      <h1>O Império do Pop Feminino</h1>
-      <p>De eras icônicas e videoclipes revolucionários à engenharia sonora e fandoms globais.</p>
     </div>
   </header>
 
-  <main class="main-container">
+  <section class="hero">
+    <h1>O Império das Divas</h1>
+    <p>Acompanhe a trajetória das rainhas que moldaram a música pop mundial, da reinvenção de Madonna à conexão mística de Taylor Swift.</p>
+  </section>
 
-    <section id="rainhas" class="section-block">
-      <div class="section-title">
-        <h2>1. As Rainhas do Pop: De Madonna a Taylor Swift (e muito além)</h2>
-        <p>Se a música pop fosse um reino de verdade, a linha de sucessão ao trono daria uma série de várias temporadas — e a lista de rainhas só cresce.</p>
-      </div>
-
-      <p class="intro-text">
-        Tudo começou lá atrás, quando <strong>Madonna</strong> decretou as regras do jogo nos anos 80: para ser da realeza, não basta cantar bem, tem que chocar, ditar moda e se reinventar a cada álbum. Antes dela, <strong>Kate Bush</strong> já plantava as sementes do pop artístico e teatral nos anos 70/80, com aquela voz etérea e visuais que pareciam saídos de um sonho (ou pesadelo) literário.
+  <main class="main-content">
+    
+    <section id="rainhas" class="section-card">
+      <h2 class="section-title">👑 As Rainhas do Pop</h2>
+      <p class="body-text">
+        Se a música pop fosse um reino de verdade, a linha de sucessão daria uma série de várias temporadas. Tudo começou quando <strong>Madonna</strong> decretou as regras nos anos 80: para ser da realeza, tem que chocar, ditar moda e se reinventar. Antes dela, <strong>Kate Bush</strong> já plantava as sementes nos anos 70/80 com visuais teatrais e voz etérea.
       </p>
 
-      <article class="artist-card">
-        <div class="card-top">
-          <div class="img-wrapper">
-            <img src="https://via.placeholder.com/150/0f2027/d4af37?text=Madonna" alt="Madonna" class="profile-img">
+      <div class="artist-grid">
+        
+        <article class="artist-card">
+          <div class="artist-info">
+            <div class="profile-img-container">
+              <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=300&q=80" alt="Madonna" class="profile-img">
+            </div>
+            <div>
+              <p class="tag">The Queen</p>
+              <h3 class="artist-name">Madonna</h3>
+            </div>
           </div>
-          <div class="artist-header">
-            <h3>Madonna</h3>
-            <span class="genre-badge">A Rainha do Pop / Dance Pop</span>
-          </div>
-        </div>
-        <div class="artist-details">
-          <p class="bio-text">Pioneira absoluta em ditar moda, se reinventar em cada era e chocar o mundo com conceitos revolucionários.</p>
-          <div class="link-wrapper">
-            <a href="https://www.madonna.com" target="_blank" rel="noopener noreferrer" class="btn-official">🔗 Acessar Perfil Oficial de Madonna</a>
-          </div>
-        </div>
-      </article>
+          <p class="body-text">A arquiteta das regras do pop. Reinvenção constante, atitude pioneira e impacto visual insuperável.</p>
+          <a href="https://www.madonna.com" target="_blank" rel="noopener noreferrer" class="btn-link">🔗 Website Oficial</a>
+        </article>
 
-      <article class="artist-card">
-        <div class="card-top">
-          <div class="img-wrapper">
-            <img src="https://via.placeholder.com/150/0f2027/d4af37?text=Kate+Bush" alt="Kate Bush" class="profile-img">
+        <article class="artist-card">
+          <div class="artist-info">
+            <div class="profile-img-container">
+              <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=300&q=80" alt="Kate Bush" class="profile-img">
+            </div>
+            <div>
+              <p class="tag">Art Pop Pioneer</p>
+              <h3 class="artist-name">Kate Bush</h3>
+            </div>
           </div>
-          <div class="artist-header">
-            <h3>Kate Bush</h3>
-            <span class="genre-badge">Pop Artístico / Art Pop</span>
-          </div>
-        </div>
-        <div class="artist-details">
-          <p class="bio-text">Voz etérea e visuais teatrais literários que pavimentaram o caminho do pop artístico nos anos 70 e 80.</p>
-          <div class="link-wrapper">
-            <a href="https://www.katebush.com" target="_blank" rel="noopener noreferrer" class="btn-official">🔗 Acessar Perfil Oficial de Kate Bush</a>
-          </div>
-        </div>
-      </article>
+          <p class="body-text">Voz etérea e visuais teatrais literários que pavimentaram o caminho do pop artístico e conceitual.</p>
+          <a href="https://www.katebush.com" target="_blank" rel="noopener noreferrer" class="btn-link">🔗 Website Oficial</a>
+        </article>
 
-      <article class="artist-card">
-        <div class="card-top">
-          <div class="img-wrapper">
-            <img src="https://via.placeholder.com/150/0f2027/d4af37?text=Mariah" alt="Mariah Carey" class="profile-img">
+        <article class="artist-card">
+          <div class="artist-info">
+            <div class="profile-img-container">
+              <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=300&q=80" alt="Mariah Carey" class="profile-img">
+            </div>
+            <div>
+              <p class="tag">Vocal Legend</p>
+              <h3 class="artist-name">Mariah Carey</h3>
+            </div>
           </div>
-          <div class="artist-header">
-            <h3>Mariah Carey</h3>
-            <span class="genre-badge">R&B / Pop / Vocal Legend</span>
-          </div>
-        </div>
-        <div class="artist-details">
-          <p class="bio-text">Alcance vocal de outro planeta, melismas que viraram marca registrada e recordes absurdos de singles nº 1 na Billboard.</p>
-          <div class="link-wrapper">
-            <a href="https://www.mariahcarey.com" target="_blank" rel="noopener noreferrer" class="btn-official">🔗 Acessar Perfil Oficial de Mariah Carey</a>
-          </div>
-        </div>
-      </article>
+          <p class="body-text">Alcance vocal lendário, melismas inconfundíveis e recordes absurdos de singles número 1 na Billboard.</p>
+          <a href="https://www.mariahcarey.com" target="_blank" rel="noopener noreferrer" class="btn-link">🔗 Website Oficial</a>
+        </article>
 
-      <article class="artist-card">
-        <div class="card-top">
-          <div class="img-wrapper">
-            <img src="https://via.placeholder.com/150/0f2027/d4af37?text=Beyonce" alt="Beyoncé" class="profile-img">
+        <article class="artist-card">
+          <div class="artist-info">
+            <div class="profile-img-container">
+              <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=300&q=80" alt="Beyoncé" class="profile-img">
+            </div>
+            <div>
+              <p class="tag">The Performer</p>
+              <h3 class="artist-name">Beyoncé</h3>
+            </div>
           </div>
-          <div class="artist-header">
-            <h3>Beyoncé</h3>
-            <span class="genre-badge">R&B / Pop / Dance</span>
-          </div>
-        </div>
-        <div class="artist-details">
-          <p class="bio-text">Transformou a performance pop em um evento cultural de nível olímpico com vocais impecáveis e presença de palco imbatível.</p>
-          <div class="link-wrapper">
-            <a href="https://www.beyonce.com" target="_blank" rel="noopener noreferrer" class="btn-official">🔗 Acessar Perfil Oficial de Beyoncé</a>
-          </div>
-        </div>
-      </article>
+          <p class="body-text">Excelência técnica e performance em nível olímpico. Transformou cada show em um evento cultural supremo.</p>
+          <a href="https://www.beyonce.com" target="_blank" rel="noopener noreferrer" class="btn-link">🔗 Website Oficial</a>
+        </article>
 
-      <article class="artist-card">
-        <div class="card-top">
-          <div class="img-wrapper">
-            <img src="https://via.placeholder.com/150/0f2027/d4af37?text=Taylor" alt="Taylor Swift" class="profile-img">
+        <article class="artist-card">
+          <div class="artist-info">
+            <div class="profile-img-container">
+              <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=300&q=80" alt="Taylor Swift" class="profile-img">
+            </div>
+            <div>
+              <p class="tag">The Mastermind</p>
+              <h3 class="artist-name">Taylor Swift</h3>
+            </div>
           </div>
-          <div class="artist-header">
-            <h3>Taylor Swift</h3>
-            <span class="genre-badge">Pop / Country / Folk</span>
-          </div>
-        </div>
-        <div class="artist-details">
-          <p class="bio-text">Provou que o império do pop também se constrói com composições afiadas e uma conexão quase telepática com os fãs.</p>
-          <div class="link-wrapper">
-            <a href="https://www.taylorswift.com" target="_blank" rel="noopener noreferrer" class="btn-official">🔗 Acessar Perfil Oficial de Taylor Swift</a>
-          </div>
-        </div>
-      </article>
+          <p class="body-text">A maior compositora de sua geração, unindo eras líricas complexas a uma conexão telepática com os fãs.</p>
+          <a href="https://www.taylorswift.com" target="_blank" rel="noopener noreferrer" class="btn-link">🔗 Website Oficial</a>
+        </article>
 
-      <article class="artist-card">
-        <div class="card-top">
-          <div class="img-wrapper">
-            <img src="https://via.placeholder.com/150/0f2027/d4af37?text=Miley" alt="Miley Cyrus" class="profile-img">
+        <article class="artist-card">
+          <div class="artist-info">
+            <div class="profile-img-container">
+              <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=300&q=80" alt="Miley Cyrus" class="profile-img">
+            </div>
+            <div>
+              <p class="tag">Reinvention Queen</p>
+              <h3 class="artist-name">Miley Cyrus</h3>
+            </div>
           </div>
-          <div class="artist-header">
-            <h3>Miley Cyrus</h3>
-            <span class="genre-badge">Pop / Rock / Country-Pop</span>
-          </div>
-        </div>
-        <div class="artist-details">
-          <p class="bio-text">A rainha da reinvenção radical: da Hannah Montana ao caos de "Wrecking Ball", até uma fase madura e aclamada.</p>
-          <div class="link-wrapper">
-            <a href="https://www.mileycyrus.com" target="_blank" rel="noopener noreferrer" class="btn-official">🔗 Acessar Perfil Oficial de Miley Cyrus</a>
-          </div>
-        </div>
-      </article>
+          <p class="body-text">A rainha da reinvenção radical: do fenômeno infantojuvenil ao rock-pop maduro e aclamado.</p>
+          <a href="https://www.mileycyrus.com" target="_blank" rel="noopener noreferrer" class="btn-link">🔗 Website Oficial</a>
+        </article>
 
-      <article class="artist-card">
-        <div class="card-top">
-          <div class="img-wrapper">
-            <img src="https://via.placeholder.com/150/0f2027/d4af37?text=K-Pop" alt="K-pop Global" class="profile-img">
+        <article class="artist-card">
+          <div class="artist-info">
+            <div class="profile-img-container">
+              <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?auto=format&fit=crop&w=300&q=80" alt="K-Pop Global" class="profile-img">
+            </div>
+            <div>
+              <p class="tag">Global Phenomenon</p>
+              <h3 class="artist-name">K-Pop Global</h3>
+            </div>
           </div>
-          <div class="artist-header">
-            <h3>K-Pop Global (BLACKPINK, TWICE, NewJeans)</h3>
-            <span class="genre-badge">K-Pop / Global Pop</span>
-          </div>
-        </div>
-        <div class="artist-details">
-          <p class="bio-text">Mostrou que o pop feminino global fala coreano, dança sincronizado e quebra recordes de streaming e vendas massivas.</p>
-          <div class="link-wrapper">
-            <a href="https://blackpinkofficial.com" target="_blank" rel="noopener noreferrer" class="btn-official">🔗 Acessar Perfil Oficial de BLACKPINK</a>
-          </div>
-        </div>
-      </article>
+          <p class="body-text">BLACKPINK, TWICE e NewJeans provaram que o pop global fala coreano, dança sincronizado e quebra recordes.</p>
+          <a href="https://blackpinkofficial.com" target="_blank" rel="noopener noreferrer" class="btn-link">🔗 Website Oficial BLACKPINK</a>
+        </article>
 
-      <blockquote class="highlight-quote">
-        "Resumo da ópera: o pop feminino não é só sobre lançar hits; é sobre criar eras icônicas que definem gerações. Quem será a próxima da fila?"
-      </blockquote>
-    </section>
-
-    <section id="clipes" class="section-block video-section">
-      <div class="section-title">
-        <h2>2. A Era dos Videoclipes e a Identidade Visual</h2>
-        <p>A música entra pelos ouvidos, mas te conquista mesmo é pelos olhos. Destaques focados na arte visual (Sem Imagens):</p>
       </div>
 
+      <div class="highlight-text">
+        "O pop feminino não é só sobre lançar hits; é sobre criar eras icônicas que definem gerações."
+      </div>
+    </section>
+
+    <section id="clipes" class="section-card video-section">
+      <h2 class="section-title">👁️ A Era dos Videoclipes e Identidade Visual</h2>
+      <p class="body-text">A música entra pelos ouvidos, mas te conquista mesmo é pelos olhos. A identidade visual transforma uma música legal em um marco histórico.</p>
+      
       <div class="video-grid">
         <div class="video-card-text">
-          <span class="tag">Lady Gaga</span>
-          <h3>Bad Romance & O Fator Choque</h3>
-          <p class="video-desc">É impossível ouvir o início sem visualizar os dançarinos de branco e os olhos em computação gráfica. O vestido de carne e a moda conceitual redefiniram a cultura pop.</p>
+          <p class="tag">Lady Gaga</p>
+          <h3 style="margin: 5px 0; color: #FFF;">Bad Romance & O Fator Choque</h3>
+          <p class="video-desc">Impossível ouvir sem visualizar os dançarinos e os olhos gigantes. O vestido de carne e a moda conceitual redefiniram a cultura pop.</p>
         </div>
 
         <div class="video-card-text">
-          <span class="tag">Ariana Grande</span>
-          <h3>Thank U, Next</h3>
-          <p class="video-desc">Referências cinematográficas a clássicos dos anos 2000 que quebraram a internet e garantiram que o mundo inteiro comentasse no dia seguinte.</p>
+          <p class="tag">Ariana Grande</p>
+          <h3 style="margin: 5px 0; color: #FFF;">Thank U, Next</h3>
+          <p class="video-desc">Referências cinematográficas de moda aos anos 2000 que quebraram a internet e viraram assunto mundial no dia seguinte.</p>
         </div>
 
         <div class="video-card-text">
-          <span class="tag">K-Pop & Visuals</span>
-          <h3>Maximalismo Neon & Paleta de Cores</h3>
-          <p class="video-desc">Do futurismo de Kate Bush ao maximalismo neon do K-pop. Se a era é triste, o clipe é azul; se é frita e dançante, joga neon em tudo!</p>
+          <p class="tag">Estética & Cores</p>
+          <h3 style="margin: 5px 0; color: #FFF;">Paleta de Cores e Conceito</h3>
+          <p class="video-desc">Cada álbum possui sua própria marca visual. Se a era é introspectiva, o clipe é azul escuro; se é dançante, o brilho neon domina tudo.</p>
         </div>
       </div>
     </section>
 
-    <section id="bastidores" class="section-block">
-      <div class="section-title">
-        <h2>3. Bastidores: Mulheres na Produção e Composição</h2>
-        <p>A realidade é muito mais forte: hoje, as mulheres comandam a caneta e as mesas de som.</p>
-      </div>
-
+    <section id="bastidores" class="section-card">
+      <h2 class="section-title">🖋️ Bastidores: Mulheres na Produção</h2>
+      <p class="body-text">Existe um mito ultrapassado de que as divas apenas cantam. Hoje, as mulheres comandam a caneta e as mesas de som:</p>
+      
       <div class="producers-grid">
         <div class="producer-box">
-          <h3>Billie Eilish</h3>
-          <p>Revolucionou a sonoridade do pop moderno gravando músicas no quarto de casa ao lado do irmão.</p>
-          <div class="link-wrapper">
-            <a href="https://www.billieeilish.com" target="_blank" rel="noopener noreferrer" class="btn-official mini">🔗 Perfil Oficial</a>
-          </div>
+          <h3 style="color: var(--dourado);">Billie Eilish</h3>
+          <p class="body-text">Revolucionou a sonoridade do pop moderno gravando músicas no quarto de casa ao lado do irmão.</p>
+          <a href="https://www.billieeilish.com" target="_blank" rel="noopener noreferrer" class="btn-link">🔗 Perfil Oficial</a>
         </div>
 
         <div class="producer-box">
-          <h3>Olivia Rodrigo</h3>
-          <p>Transforma dramas adolescentes em hinos de rock-pop autorais que todo mundo canta gritando no carro.</p>
-          <div class="link-wrapper">
-            <a href="https://www.oliviarodrigo.com" target="_blank" rel="noopener noreferrer" class="btn-official mini">🔗 Perfil Oficial</a>
-          </div>
+          <h3 style="color: var(--dourado);">Olivia Rodrigo</h3>
+          <p class="body-text">Transforma dramas em hinos autorais de rock-pop que todo mundo canta gritando no carro.</p>
+          <a href="https://www.oliviarodrigo.com" target="_blank" rel="noopener noreferrer" class="btn-link">🔗 Perfil Oficial</a>
         </div>
 
         <div class="producer-box">
-          <h3>Taylor Swift</h3>
-          <p>Considerada uma das maiores compositoras de sua geração, escrevendo pontes que parecem poesias complexas.</p>
+          <h3 style="color: var(--dourado);">Taylor Swift</h3>
+          <p class="body-text">Considerada uma das maiores compositoras de sua geração, escrevendo pontes que parecem poesias complexas.</p>
         </div>
 
         <div class="producer-box">
-          <h3>Mariah Carey</h3>
-          <p>Não só cantava como co-escrevia e produzia boa parte do material que virou padrão vocal no pop.</p>
+          <h3 style="color: var(--dourado);">Mariah Carey</h3>
+          <p class="body-text">Não só cantava, como co-escrevia e produzia boa parte do material que virou padrão de vocal no pop.</p>
         </div>
       </div>
     </section>
 
-    <section id="fandoms" class="section-block">
-      <div class="section-title">
-        <h2>4. O Fenômeno dos Fandoms Globais (e dos Recordes)</h2>
-        <p>Swifties, Beyhive, Blinks, Arianators e ARMY: uma inteligência geopolítica altamente organizada.</p>
+    <section id="fandoms" class="section-card">
+      <h2 class="section-title">🪐 O Fenômeno dos Fandoms Globais</h2>
+      
+      <div class="show-media-wrapper">
+        <img src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?auto=format&fit=crop&w=1000&q=80" alt="Show ao vivo da Taylor Swift" class="show-media">
+        <span class="caption">The Eras Tour - Taylor Swift ao vivo diante de multidões em estádios lotados</span>
       </div>
 
-      <div class="show-media">
-        <img src="https://via.placeholder.com/800x400/0f2027/d4af37?text=Taylor+Swift+Live+-+The+Eras+Tour" alt="Show ao vivo da Taylor Swift" class="show-banner">
-        <span class="caption">Show ao vivo da Taylor Swift: Estádios lotados e a força impressionante dos fandoms</span>
+      <div class="highlight-text">
+        Swifties, Beyhive, Blinks, Arianators e ARMY não são apenas fãs; são quase uma inteligência geopolítica altamente treinada.
       </div>
 
-      <div class="fandom-details">
-        <p>Os fandoms globais organizam-se para:</p>
-        <ul class="bullet-list">
-          <li><strong>Derrubar recordes:</strong> Milhões de visualizações em 24h, recordes de streaming e debuts no topo da Billboard.</li>
-          <li><strong>Análise forense:</strong> Estudar cada post da artista em busca de pistas escondidas (easter eggs).</li>
-          <li><strong>Esgotar estádios:</strong> Acampar por dias e derrubar sites de ingressos em minutos.</li>
-        </ul>
-      </div>
+      <p class="body-text">Eles se organizam nas redes para:</p>
+      <ul class="bullet-list">
+        <li><strong>Derrubar recordes:</strong> Milhões de visualizações em 24h, recordes no Spotify e estreias em #1 na Billboard.</li>
+        <li><strong>Análise forense:</strong> Estudar cada publicação da artista em busca de "easter eggs" (pistas escondidas).</li>
+        <li><strong>Esgotar estádios:</strong> Acampar por dias e esgotar ingressos em poucos minutos.</li>
+      </ul>
     </section>
 
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-container">
-      <div class="footer-brand">
-        <h3 class="footer-logo">✨ Pop Universe</h3>
-        <p>O portal completo sobre a cultura pop e suas maiores estrelas.</p>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">✨ POP UNIVERSE</div>
+      <div class="copy">
+        <p>&copy; 2026 - Desenvolvido por: Bruno e Davi - Turma 1TB</p>
       </div>
-
-      <div class="footer-credits">
-        <h4>Créditos</h4>
-        <span class="class-badge">Turma 1TB</span>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p>&copy; 2026 - Desenvolvido por: Bruno e Davi - Turma 1TB</p>
     </div>
   </footer>
 
